@@ -1,0 +1,115 @@
+# metadata of tutorial room
+room:
+  title: '練習室'
+
+# guide NPC
+guide:
+  # main guide
+  name: '替身君'
+  # other npcs
+  npc1: 'Gert'
+  npc2: 'Otto'
+  npc3: 'Walter'
+  npc4: 'Thomas'
+  npc5: 'Lisa'
+
+# common data
+common:
+  messageDialog:
+    title: '練習室'
+    ok: '繼續'
+  # error message shown when this tool is not taught.
+  notTaughtMessage: '替身君：「我還沒有教到這個啦！別急。」'
+# reset dialog
+resetDialog:
+  message: '你已經完成新手教學了。你想要再練習一次嗎？'
+  ok: '再練習一次'
+  cancel: '取消'
+
+# phase 0: initialState
+phase0:
+  stepMessage: '歡迎來到新手村！在這個練習用房間所作的操作，不會被其他人看到。首先先試著發言看看吧。'
+
+# phase 1: speak as audience
+phase1:
+  # message by guide after speaking as audience
+  stepMessage1: |
+    做得好！　觀戰者也可以像這樣發言（禁止觀戰者發言的村子除外）。
+
+    我是負責在新手村介紹遊戲流程的替身君。請多多指教。
+  stepMessage2: |
+    想要加入遊戲，首先讓我們加入村子吧。請按一下上面的「加入村子」按鈕。
+
+# phase 2: enter the room
+phase2:
+  # message by guide after entering the room
+  stepMessage1: |
+    加入村子了！
+    進入了村子裡的的人說的話顏色會變得不太一樣。試著發言看看。
+  stepMessage2: |
+    如果準備好要開始遊戲，請按下「準備完成/準備中」的按鈕進入[ready]狀態。
+    若要取消準備只需要再次按下按鈕即可。
+
+    若準備好繼續下一步請進入準備狀態稍待片刻。
+# phase 4: start game
+phase4:
+  # message by guide before game start
+  stepMessage1: |
+    參加者全員到齊並準備完成的話，就可以等待建立村子的人開始遊戲了。
+    遊戲會從第一天夜晚開始。
+# phase 5: first night
+phase5:
+  # message by guide after game start
+  stepMessage1: |
+    遊戲開始。你的身份是村人。
+    村人沒有任何特殊能力，無法在夜晚進行任何行動，但是可以自言自語等待黎明的到來。
+    夜晚的發言是自言自語因此其他人無法聽見你說了什麼，但人狼、共有者等部分職業可以在夜晚對話。
+
+    另外，GM的發言會是這個顏色。
+  # message by guide right after getting day 2
+  stepMessage2: |
+    天亮了。白天的發言全部人都可以聽見。積極地參與討論吧。
+    還有，當你想要自言自語的時候，發言的種類也可以選擇「自言自語」。
+  stepMessage3: |
+    白天的討論結束之後就要投票決定處刑的對象了。
+    在討論時間結束之前就可以先行投票（設有投票專用時間的情況下除外），
+    但是票一旦投下去就無法再更改選擇，請慎重選擇要處死的人。
+# phase 6: 2nd day
+phase6:
+  # message by guide after user voted
+  stepMessage1: |
+    投票完成！投票的訊息紀錄只有自己看得到。
+    在處刑結束之前其他人無法知道自己投給了誰所以不用擔心。
+
+    全員投票完成後，就會行刑並進入夜晚。
+# phase 7: 2nd night
+phase7:
+  # message by guide after changed to 2nd night
+  stepMessage1: |
+    第2天的夜晚來臨了。現在我們來練習能力的使用吧。
+    正常來說變身是沒有辦法做到的，但為了練習需要，現在特別把你變身為占卜師。
+  stepMessage2: |
+    占卜師在夜間選擇一人作為占卜對象，可以知道對方是不是人狼。
+    好好思考之後選擇占卜對象吧。
+
+    請注意，與投票相同，使用能力一旦決定對象就無法再更改。
+# phase 8: used diviner skill
+phase8:
+  # message by guide after using Diviner skill
+  stepMessage1: |
+    使用了占卜師的能力。能力使用時就會像這樣顯示只有自己看得見的訊息紀錄。
+    占卜師的能力結果會在明天早上顯示（預設規則下）。
+  # message after moving to day 3
+  stepMessage2: |
+    第3天到來了。占卜師會看到像這樣子只有自己看得見的占卜結果。
+
+    今天沒有什麼特別的可以教你了。像昨天一樣進行討論與投票吧！
+
+# phase 9: day 3
+phase9:
+  # message after the end of the game
+  stepMessage1: |
+    我們成功將人狼處刑贏得勝利了！
+
+    以上就是新手教學的全部內容，辛苦了。
+    接下來在「村莊列表」裡尋找村莊和大家一起遊玩，認識新朋友吧！

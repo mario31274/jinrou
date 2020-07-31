@@ -1,0 +1,50 @@
+# Language file for rooms
+
+# title of rooms component
+title: "村莊列表"
+
+# message show when no room is avaiable.
+noRoom: "目前沒有任何村莊。"
+
+# loading message
+loading: "列表讀取中"
+# error message for loading failure.
+loadFailed: "無法讀取村莊列表。"
+
+status:
+  # room is waiting.
+  waiting: "募集中"
+  # room is playing.
+  playing: "對戰中"
+  # room is ended.
+  end: "終了"
+
+# gm is on
+gm: "有GM"
+
+# player number
+playerNumber: "{{count}}人"
+
+# title of owner name
+ownerTitle: "建立者"
+# hidden owner name
+ownerHidden: "???"
+
+# previous page button
+prevPageButton: "上一頁"
+# next page button
+nextPageButton: "下一頁"
+
+# link to other pages / modes.
+link:
+  newRoom: "建立新村子"
+  new: "活躍中的村子"
+  old: "老舊村子"
+  log: "已結束的村子"
+
+# game result.
+result:
+  win: "勝利"
+  lose: "敗北"
+  draw: "平手"
+

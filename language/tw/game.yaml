@@ -6,6 +6,8 @@ common:
   suddenDeathPenalty: "暴斃死處罰"
   # Chemical werewolf
   chemicalWerewolf: "煉成人狼"
+  # 敗北村
+  losemode: "敗北村"
 # Error messages
 error:
   # Common error message
@@ -28,7 +30,7 @@ error:
     # That player is not dead
     notDead: "這個玩家已經死亡。"
     # Do not select scapegoat.
-    noScapegoat: "不能選擇$t(common.scapegoat)。"
+    noScapegoat: "不能選擇替身君。"
     ## others
     # Such game does not exist.
     noSuchGame: "這場遊戲不存在。"
@@ -36,6 +38,8 @@ error:
     needLogin: "請先登入。"
     # given query is invalid.
     invalidQuery: "不正確的操作。"
+    # Game has already finished.
+    alreadyFinished: "此遊戲已經結束。"
   # Error during gamestart operation
   gamestart:
     # Player number is invalid (invalid number is passed as a number of a role)
@@ -55,7 +59,7 @@ error:
     # Time parameter is invalid.
     invalidTime: "時間的選擇不正確。"
     # Players number is not enough.
-    playerNotEnough: "人數太少導致不能開始。包含$t(common.scapegoat)必須要 {{count}} 人。"
+    playerNotEnough: "人數太少導致不能開始。包含替身君必須要 {{count}} 人。"
     # Too many for quantum werewolf.
     tooManyQuantum: "人數過多。量子人狼必須人數為 {{count}} 人以下。"
     # Chemical werewolf is not available under this rule.
@@ -64,6 +68,10 @@ error:
     unknownCasting: "不明的配置。"
     # Helper target does not exist
     helperNotExist: "{{name}} 的助手對象不存在。"
+    # for 一部闇鍋: selected category is empty (all jobs in it are excluded)
+    categoryAllExcluded: "「{{category}}」は当該役職が全て除外されているため固定できません。"
+    # for 一部闇鍋: do not exclude all jobs in category (Werewolf)
+    implicitCategoryAllExcluded: "「{{category}}」の役職が全て除外されているためゲームを開始できません。"
   # Error during sudden death punishment
   suddenDeathPunish:
     # You are not a valid voter
@@ -85,7 +93,11 @@ error:
     # no comment
     tooLong: "發言過長。"
     # Access restriction.
-    ban: "受到黑名單限制，您無法發言。"
+    ban: "由於帳號受到限制，您無法發言。"
+    # Watchspeak is not allowed
+    noWatchSpeak: "觀戰者無法發言。"
+    # too many special command is used.
+    tooManyCommands: "特殊指令的數量過多。"
   # Error during job
   job:
     # Invalid target selection.
@@ -95,9 +107,13 @@ error:
   # Will setting.
   will:
     # Will is not enabled in this game.
-    noWill: "不能使用遺言。"
+    noWill: "此村不能留遺書。"
     # You are already dead.
     alreadyDead: "已經死亡。"
+    # norevive setting.
+    norevive:
+      # Norevive is already set.
+      done: "已經拒絕復活。"
 
 
 # System Logs
@@ -175,7 +191,7 @@ system:
   # Role of a player changed (with old job)
   changeRoleFrom: "{{name}} 從 {{old}} 變化為 {{result}}。"
   # GM霊能
-  gmPsychic: "被處刑的 {{name}} 的靈能結果為 {{result}} 。"
+  gmPsychic: "遭處刑的 {{name}} 的靈能結果為 {{result}} 。"
   # A Hunter is preparing a last attack.
   hunterPrepare: "{{names}} 憑著最後的力量拿起槍，請選擇擊殺對象。"
   # A user declied to be revived.
@@ -188,11 +204,13 @@ system:
 # User-shown name of phases
 phase:
   rolerequesting: "希望選擇"
-  day: "日"
-  voting: "投票"
-  night: "夜"
-  additional: "猶豫"
+  day: "白天"
+  voting: "投票時間"
+  night: "夜晚"
+  additional: "猶豫時間"
   skill: "對象選擇中"
+  # n seconds rule is active
+  silent: "發言禁止"
 
 # Reason of death
 found:
@@ -208,20 +226,69 @@ found:
   goneDay: "{{name}} 因為沒有投票而暴斃死，暴斃死是非常重大的令人感到困擾的行為，請絕對不要這樣做。"
   goneNight: "{{name}} 因為沒有發動夜晚能力而暴斃死，暴斃死是非常重大的令人感到困擾的行為，請絕對不要這樣做。"
   fallback: "{{name}} 死亡。"
-# Result of Game
+
+# Detailed reason of death
+foundDetail:
+  werewolf: "人狼的襲撃"
+  werewolf2: "人狼的襲撃"
+  trickedWerewolf: "人狼的襲撃"
+  poison: "中毒"
+  hinamizawa: "感染症"
+  vampire: "吸血鬼的襲撃"
+  vampire2: "吸血鬼的襲撃"
+  witch: "毒藥"
+  dog: "狗的襲撃"
+  trap: "陷阱"
+  marycurse: "血腥瑪麗的詛咒"
+  psycho: "瘋狂殺人魔"
+  curse: "咒殺"
+  punish: "處刑"
+  spygone: "失踪"
+  deathnote: "心臓麻痺"
+  foxsuicide: "追隨妖狐的身後自殺了"
+  friendsuicide: "追隨戀人的身後自殺了"
+  twinsuicide: "追隨雙子的身後自殺了"
+  dragonknightsuicide: "追隨龍騎士的身後自殺了"
+  vampiresuicide: "追隨吸血鬼的身後自殺了"
+  infirm: "衰老"
+  hunter: "槍殺"
+  gmpunish: "被GM殺死"
+  gone-day: "白天暴斃"
+  gone-night: "夜間暴斃"
+  crafty: "裝死"
+  greedy: "貪婪的報應"
+  tough: "捨身"
+  lunaticlover: "狂愛者的襲撃"
+  hooligan: "暴動者的暴行"
+  dragon: "龍的火焰"
+  samurai: "武士的反撃"
+  elemental: "精靈之力暴走"
+  sacrifice: "活人獻祭"
+  santasuicide: "追隨聖誕老人的身後自殺了"
+  fascinatesuicide: "追隨月下美人的身後自殺了"
+  lorelei: "哀怨的歌聲"
+  loreleisuicide: "追隨羅蕾萊的身後自殺了"
+  fallback: "不明"
+  situation: "{{name}}的死因：{{detail}}。"
+
+  # Result of Game
 judge:
   human: "村民們憑著智慧與勇氣取回了村莊的平穩。"
   neet: "村莊成為了尼特的樂園。"
   werewolf: "人狼享用完最後的村人後離去尋找下個獵物了…"
   fox: "村莊被妖狐支配了。"
   devil: "村莊被惡魔支配了。"
-  friendsNormal: "{{count}} 人的愛之力是沒有何者能夠匹敵的。"
-  friendsSpecial: "{{count}} 人的禁斷的愛之力是沒有何者能夠匹敵的。"
+  friendsNormal: "{{count}} 人的愛之力是沒有任何人能夠匹敵的。"
+  friendsSpecial: "{{count}} 人的禁斷的愛之力是沒有任何人能夠匹敵的。"
   friendsAll: "村莊被戀人支配了。"
   cult: "村莊被邪教主支配了。"
   vampire: "吸血鬼享用完最後的村人後離去尋找下個獵物了…"
   lonewolf: "人狼享用完最後的村人後離去尋找下個獵物了…"
+  raven: "村子已經被烏鴉完全支配了。"
+  hooligan: "村子已經被暴徒們破壊殆盡了。"
+  lorelei: "羅蕾萊誘惑了所有村人，所有的一切都消失在了漩渦之中……"
   draw: "平手。"
+  scapegoat: "村子已經被替身君支配了。"
   # short summary
   short:
     human: "村人勝利"
@@ -233,6 +300,9 @@ judge:
     vampire: "吸血鬼陣營勝利"
     lonewolf: "一匹狼勝利"
     draw: "…"
+    raven: "烏鴉勝利"
+    hooligan: "暴徒勝利"
+    lorelei: "羅蕾萊勝利"
 
 # Terms for quantum werewolf
 quantum:
@@ -252,3 +322,4 @@ logs:
 tweet:
   # Tweet when game ended
   gameend: "「{{roomname}}」的結果：{{result}} #紫月人狼"
+  

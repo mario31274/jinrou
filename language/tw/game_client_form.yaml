@@ -1,0 +1,177 @@
+# name for normal job form.
+normalName: '{{job}}的能力'
+# label of button of normal job form.
+normalButton: '選擇'
+
+# label for each form type.
+formType:
+  required: '必須'
+  optional: '任意'
+  optionalOnce: '任意（僅限1次）'
+
+# Name forms which is a little special.
+specialName:
+  _day: '處刑投票'
+  _Werewolf: '人狼的襲撃'
+  Dog1: '狗的能力'
+  Dog2: '狗的能力'
+  BadLady1: '惡女的能力'
+  BadLady2: '惡女的能力'
+  CraftyWolf2: '狡猾な狼的能力'
+  Poet1: '詩人的能力'
+  Poet2: '詩人的能力'
+  GachaAddicted_Normal: '課金者的能力'
+  GachaAddicted_Premium: '課金者的能力'
+  GachaAddicted_Commit: '課金者的能力'
+  _Quantum_Diviner: '占卜師的能力'
+  _Quantum_Werewolf: '人狼的襲撃'
+
+# Message for normal selection form.  normalMessage:
+messages:
+  _day: '請投票決定要處刑的人'
+  Waiting: '請選擇希望擔任的職業'
+  WolfDiviner: '請選擇要占卜的對象'
+  GreedyWolf: '若想在今晚滿足貪欲，請選擇一位對象'
+  Diviner: '請選擇要占卜的對象'
+  TinyFox: '請選擇要占卜的對象'
+  Guard: '請選擇要保護的對象'
+  Magician: '請選擇要復活的對象'
+  Spy: '若想在今晚離開村子，請選擇一位對象'
+  Fugitive: '請選擇要逃到誰的家裡'
+  Liar: '請選擇要占卜的對象'
+  Copier: '請選擇要模仿的對象'
+  Light: '請選擇要寫在死亡筆記本上的名字'
+  Cupid: '請依次選擇要成為戀人的兩人'
+  Lover: '請選擇要成為戀人的對象'
+  Stalker: '請選擇要跟蹤的對象'
+  Spellcaster: '請選擇要詛咒的對象'
+  Priest: '請選擇要守護的對象'
+  PI: '請選擇要調查的對象'
+  Sorcerer: '請選擇要調查的對象'
+  Doppleganger: '請選擇要作為分身的對象'
+  CultLeader: '請選擇要變成信徒的對象'
+  Vampire: '請選擇要襲擊的對象'
+  Cat: '請選擇要復活的對象'
+  OccultMania: '請選擇要發動能力的對象'
+  Dog1: '請選擇是否要殺掉你的飼主'
+  Dog2: '請選擇你的飼主'
+  Dictator: '若要中止討論強行處決，請選擇處刑對象'
+  Trapper: '請選擇要保護的對象'
+  WolfBoy: '請指定一人使其被認為是人狼'
+  MinionSelector: '請指定要成為狼的部下的對象'
+  Thief: '請選擇想要的職業'
+  Hoodlum: '請依序選擇要怨恨的對象'
+  _Quantum_Diviner: '請選擇要占卜的對象'
+  _Quantum_Werewolf: '請選擇要襲擊的對象'
+  Counselor: '請選擇要輔導的對象'
+  Miko: '請選擇是否在今晚守護自己'
+  FascinatingWolf: '請選擇要誘惑的對象'
+  ToughWolf: '若想在今晚發動能力，請選擇一位襲擊對象'
+  ThreateningWolf: '請選擇要威嚇的對象'
+  WanderingGuard: '請選擇要保護的對象'
+  ObstructiveMad: '請選擇要干擾的對象'
+  TroubleMaker: '請選擇是否在隔天天亮發動能力'
+  BloodyMary: '請選擇要咒殺的對象'
+  SantaClaus: '請選擇要送聖誕禮物的對象'
+  Phantom: '請選擇要盜取職業的對象'
+  BadLady1: '首先請選擇你的本命對象'
+  BadLady2: '再來請選擇你要玩弄的對象'
+  Pyrotechnist: '請選擇是否在今晚放煙火'
+  Helper: '請選擇要幫助的對象'
+  Bomber: '請選擇要裝上炸彈的對象'
+  Blasphemy: '請選擇要褻瀆的對象'
+  Ushinotokimairi: '請選擇要詛咒的對象'
+  Patissiere: '請選擇要送本命巧克力的對象'
+  MadDog: '請選擇要襲擊的對象'
+  Hypnotist: '請選擇要施展催眠術的對象'
+  CraftyWolf: '請選擇是否要裝死'
+  CraftyWolf2: '請選擇是否要停止裝死'
+  GotChocolate: '請選擇是否要吃掉巧克力'
+  Shishimai: '請選擇獅子舞的咀嚼對象'
+  Pumpkin: '請選擇要變成南瓜的對象'
+  MadScientist: '請選擇要復活的對象'
+  Forensic: '請選擇要調查的對象'
+  Cosplayer: '請選擇要保護的對象'
+  Ninja: '請選擇要偵查的對象'
+  Hunter: '請選擇要槍擊的對象'
+  MadHunter: '請選擇要槍擊的對象'
+  Idol: '請選擇要變成粉絲的對象'
+  XianFox: '請選擇要透視的對象'
+  SnowLover: '請選擇要成為戀人的對象'
+  DecoyWolf: '請選擇要作為誘餌的對象'
+  LunaticLover: '請選擇狂愛的對象'
+  Hooligan: '請選擇一位對象使其加入暴動'
+  HooliganAttacker: '請選擇要施暴的對象'
+  HooliganGuard: '請選擇要逮捕的對象'
+  Illusionist: '請選擇被襲擊的替身對象'
+  Satori: '請選擇要使用讀心的對象'
+  Samurai: '請選擇要保護的對象'
+  Dracula: '請選擇要吸血的對象'
+  Elementaler: '請選擇要保護的對象'
+  Sacrifice: '請選擇要守護的對象'
+  Synesthete: '請選擇要查看顏色的對象'
+  Hitokotonushinokami: '請選擇要占卜的對象'
+  GameMaster: 'GM用指令'
+
+# Texts for GameMaster form.
+GameMaster:
+  deadalive: '死亡/復活'
+  kill: '殺死'
+  revive: '復活'
+  time: '時間延長/縮短'
+  longer: '延長{{count}}秒'
+  shorter: '縮短{{count}}秒'
+
+# Texts for _Werewolf form.
+_Werewolf:
+  description: '請選擇要襲擊的對象'
+  remains: '剩餘可襲撃人數：{{count}}'
+
+# Texts for Merchant form.
+Merchant:
+  # name of kits.
+  kit:
+    Diviner: '占卜SET'
+    Psychic: '靈能SET'
+    Guard: '獵人SET'
+  # description.
+  description: '請選擇商品發送對象'
+# Texts for HomeComer form (extends Merchant).
+HomeComer:
+  description: '請選擇土產以及贈送的對象'
+# Texts for Witch form.
+Witch:
+  description: '請選擇施藥對象和要施的藥'
+  # name of drugs.
+  drug:
+    kill: '毒藥'
+    revive: '復活藥'
+# Texts for DragonKnight form.
+DragonKnight:
+  description: '請選擇要發動能力的對象'
+  # normal guard button.
+  guardButton: '護衛'
+  # kill button.
+  killButton: '殺害（僅限1次）'
+  # kill button (already used)
+  killButtonUsed: '殺害（已使用）'
+
+# Texts for Poet form.
+Poet:
+  # description for initial form.
+  descriptionInit: '請輸入詩詞並選擇贈詩對象。詩詞最多可以輸入17字。'
+  # description for normal form.
+  descriptionReply: '請輸入要贈送給{{name}}的詩詞。詩詞最多可以輸入17字。'
+  poemPlaceholder: '在此輸入詩詞'
+  # label for target selection
+  targetSelectionLabel: '選擇贈詩對象：'
+  selectButton: '贈詩'
+
+# Texts for GachaAddicted form.
+GachaAddicted:
+  descriptionNormal: '可以抽取今日的普通卡了'
+  normalButton: '抽普通卡'
+  descriptionPremium: '還能再抽{{votes}}次稀有卡'
+  premiumButton: '抽稀有卡'
+  descriptionCommit: '目前擁有的職業：【{{jobname}}】'
+  commitButton: '變成{{jobname}}'

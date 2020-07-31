@@ -54,10 +54,9 @@ jobname:
   Thief: "小偷"
   OccultMania: "怪誕狂熱者"
   WolfCub: "狼之子"
-  WhisperingMad: "私語狂人"
+  WhisperingMad: "低語狂人"
   Lover: "求愛者"
   MinionSelector: "部下選擇者"
-  Theif: "小偷"
   Dog: "狗"
   Dictator: "獨裁者"
   SeersMama: "預言者的媽媽"
@@ -109,12 +108,79 @@ jobname:
   MadHunter: "復仇者"
   MadCouple: "尖叫狂人"
   Emma: "閻魔"
-  Owlman: "夜梟"
   EyesWolf: "瞳狼"
+  TongueWolf: '舌禍狼'
+  BlackCat: '黒貓'
+  Idol: '偶像'
+  XianFox: '仙狐'
+  LurkingMad: '暗躍者'
+  SnowLover: '雪女'
+  Raven: '烏鴉'
+  DecoyWolf: '囮狼'
+  LunaticLover: '狂愛者'
+  Hooligan: '暴徒'
+  HooliganAttacker: '暴動者'
+  HooliganGuard: '警備員'
+  HomeComer: '歸省者'
+  Illusionist: '幻術師'
+  DragonKnight: '龍騎士'
+  Satori: '覺'
+  Samurai: '武士'
+  Dracula: '德古拉'
+  VampireClan: '吸血鬼的眷屬'
+  Elementaler: '精靈使'
+  Poet: '詩人'
+  Amanojaku: '天邪鬼'
+  Ascetic: '修驗者'
+  DarkClown: '黑暗小丑'
+  DualPersonality: '雙重人格'
+  Sacrifice: '活祭品'
+  AbsoluteWolf: '絶對狼'
+  Oracle: '預言者'
+  NightRabbit: '夜兔'
+  GachaAddicted: '課金者'
+  Fate: '運命之子'
+  Synesthete: '聯覺者'
+  Reindeer: '馴鹿'
+  Streamer: '直播主'
+  Listener: '直播觀眾'
+  QueenOfNight: '月下美人'
+  Tarzan: '野生兒'
+  CurseWolf: '咒狼'
+  Hitokotonushinokami: '一言主神'
+  RemoteWorker: '在宅者'
+  IntuitionWolf: '直覺派狼'
+  Lorelei: '羅蕾萊'
   GameMaster: "遊戲GM"
   Helper: "助手"
   Waiting: "等待中"
   Watching: "觀戰者"
+
+  # Name of categories.
+categoryName:
+  Human: '村人系'
+  Werewolf: '人狼系'
+  Fox: '妖狐系'
+  Madman: '狂人系'
+  Immoral: '背德者系'
+  Switching: '職業變化系'
+  Others: '第三陣營系'
+
+# Name of teams.
+teamName:
+  Human: '村人陣營'
+  Werewolf: '人狼陣營'
+  LoneWolf: '人狼陣營'
+  Fox: '妖狐陣營'
+  Friend: '恋人陣營'
+  Devil: '惡魔君'
+  Vampire: '吸血鬼陣營'
+  Cult: '邪教陣營'
+  Raven: '烏鴉陣營'
+  Hooligan: '暴徒陣營'
+  Lorelei: '羅蕾萊陣營'
+  Neet: '尼特'
+  Others: '其他'
 
 # Fortune result.
 fortune:
@@ -129,8 +195,8 @@ psychic:
   werewolf: "人狼"
   BigWolf: "大狼"
   TinyFox: "子狐"
-
-
+  # delimiter of multiple result in chemical.
+  _delimiter: '×'
 
 # Diviner
 Diviner:
@@ -167,13 +233,16 @@ Guard:
   # Log of GJ
   gj: "{{guard}} 對 {{name}} 的護衛成功了。"
 
+  # Poisoner
+Poisoner:
+  select: '{{name}}の毒が{{target}}を襲いました。'
+
 # TinyFox
 TinyFox:
   # Successful result of divine by TinyFOx.
   resultlog_success: "{{name}} 的占卜結果， {{target}} 是{{result}}？"
   # Failure
   resultlog_fail: "{{name}} 的占卜結果， {{target}} 非常可疑？"
-
 
 # Magician
 Magician:
@@ -193,7 +262,6 @@ Fugitive:
   noSelf: "不能逃往自己家。"
   select: "{{name}} 往 {{target}} 的家附近逃亡。"
 
-
 # Merchant
 Merchant:
   # Name of kits.
@@ -209,8 +277,6 @@ Merchant:
 
 # Liar
 Liar:
-  # Select a target.
-  select: "$t(roles:Diviner.select, {'name': {{name}}, 'target': {{target}} })"
   # Result.
   resultlog: "雖然不是很自信，但根據騙子占卜的結果， {{target}} 應該是{{result}}吧。應該。"
 
@@ -228,6 +294,11 @@ Copier:
 Light:
   # Selected a target.
   select: "{{name}} 在死神的筆記上寫下 {{target}} 的名稱。"
+
+# Devil
+Devil:
+  # attacked by a werewolf.
+  attacked: '{{name}} 由於被狼攻擊，惡魔之力增強了。'
 
 # Cupid
 Cupid:
@@ -265,6 +336,7 @@ Spellcaster:
 Priest:
   # Selected a target.
   select: "{{name}} 對 {{target}} 使用神聖之力守護。"
+  protected: '{{name}} 用神聖之力成功抵抗了 {{found}}。'
 
 # Prince
 Prince:
@@ -310,6 +382,7 @@ Vampire:
 Cat:
   # Select a target.
   select: "{{name}} 對 {{target}} 施展死者復活術。"
+  reviveWrongPlayer: '{{name}} 手滑把 {{target}} 給復活了。'
 
 # Witch
 Witch:
@@ -363,7 +436,6 @@ SeersMama:
 
 # Trapper
 Trapper:
-  noGuardSame: "$t(roles:Guard.noGuardSame)"
   # Select a target.
   select: "{{name}} 對 {{target}} 設置陷阱。"
   # GJ log.
@@ -374,7 +446,6 @@ WolfBoy:
   # Select a target.
   select: "{{name}} 令 {{target}} 被當成人狼。"
 
-
 # Hoodlum
 Hoodlum:
   # Error: this player is already selected
@@ -384,12 +455,6 @@ Hoodlum:
 
 # QuantumPlayer
 QuantumPlayer:
-  # Select a target of divine.
-  divine: "$t(roles:Diviner.select, {'name': {{name}}, 'target': {{target}} })"
-  # Select a target of werewolf attack.
-  attack: "$t(roles:Werewolf.select, {'name': {{name}}, 'target': {{target}} })"
-  # Result of divine
-  divineResult: "$t(roles:Diviner.resultlog, {'name': {{name}}, 'target': {{target}}, 'result': {{result}} })"
   # Cannot divine.
   cannotDivine: "{{name}} 已經沒有身為占卜師的可能性，無法進行占卜。"
 
@@ -404,6 +469,7 @@ Counselor:
 Miko:
   # Select a self protection.
   select: "{{name}} 使用神聖之力守護自己。"
+  protected: '{{name}} 用神聖之力成功抵抗了 {{found}}。'
 
 # GreedyWolf
 GreedyWolf:
@@ -436,8 +502,6 @@ ThreateningWolf:
   affected: "{{name}} 被威嚇了，今夜的能力無效化。"
 
 WanderingGuard:
-  # Select a target.
-  select: "$t(roles:Guard.select, {'name': {{name}}, 'target': {{target}} })"
   # This player cannot be guarded anymore.
   noGuardMore: "{{name}} 已經不能護衛 {{target}} 了。"
 
@@ -457,6 +521,8 @@ TroubleMaker:
 FrankensteinsMonster:
   # Drained a role from a body.
   drain: "{{name}} 對 {{target}} 的屍體吸收了{{jobname}}的能力。"
+  # separator ob jobs.
+  separator: '，'
 
 BloodyMary:
   # Select a target.
@@ -484,21 +550,6 @@ SantaClaus:
     poison: "{{name}} 收到了有毒的禮物。"
     # internal: a template for present delivery.
     _log: "{{name}} 收到了{{thing}}。"
-    # thingが正しく表示されない、別の方法を使用して表示する
-    # HolyMarked set
-    # HolyMarked: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '聖痕者組合'})"
-    # Oldman set
-    # Oldman: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '玉手箱（老人）'})"
-    # Priest set
-    # Priest: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '聖職者組合'})"
-    # Miko set
-    # Miko: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '角色扮演組合（巫女）'})"
-    # Diviner set
-    # Diviner: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '占卜組合'})"
-    # Guard set
-    # Guard: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '獵人組合'})"
-    # Psychic set
-    # Psychic: "$t(roles:SantaClaus.deliver._log, {'name': {{name}}, 'thing': '靈能組合'})"
 
 Phantom:
   # Select not to seal a role.
@@ -515,8 +566,6 @@ BadLady:
   selectMain: "{{name}} 對 {{target}} 選為本命對象。"
   # Select a keep friend.
   selectKeep: "{{name}} 對 {{target}} 選為玩弄對象。"
-  # Become a lover to a BadLady.
-  become: "$t(roles:Lover.become, {'name': {{name}} })"
 
 DrawGirl:
   # Reveal that a player is a DrawGirl.
@@ -611,8 +660,6 @@ Pumpkin:
 MadScientist:
   # Select a revival target.
   select: "{{name}} 對 {{target}} 實施復活手術。"
-  # become a wolfminion.
-  become: "$t(roles:MinionSelector.become, {'name': {{name}} })"
 
 Forensic:
   # Select a target.
@@ -653,12 +700,34 @@ Emma:
     curse: "{{name}} 被詛咒殺害。"
     # Killed by a PsychoKiller
     psycho: "{{name}} 被變態殺人狂殺害。"
+    # Killed a LunaticLover
+    lunaticlover: '{{name}} 被狂愛者殺害。'
     # Suicided after fox
     foxsuicide: "{{name}} 追隨妖狐之後自殺。"
     # Suicided after friend
     friendsuicide: "{{name}} 追隨戀人之後自殺。"
     # Suicided after his twin
     twinsuicide: "{{name}} 追隨雙子之後自殺。"
+    # DragonKnight's suicide
+    dragonknightsuicide: '{{name}} 自責不已，斷絕了自己的性命。'
+    # Suicided after vampires
+    vampiresuicide: '{{name}} 追隨吸血鬼而自殺了。'
+    # Suicided after Santaclause
+    santasuicide: '{{name}} 追隨聖誕老人而自殺了。'
+    # Suicided after QueenOfNight
+    fascinatesuicide: '{{name}} 被某種東西附身後斷絕了自己的性命。'
+    # Killed by hooligan
+    hooligan: '{{name}} は暴動者たちに殺されたようです。'
+    # Killed by DragonKnight
+    dragon: '{{name}} は竜に焼き殺されたようです。'
+    # Killed by Samurai
+    samurai: '{{name}} は侍に一刀両断されたようです。'
+    # Killed by Elementaler
+    elemental: '{{name}} は暴走した精霊によって殺されたようです。'
+    # Sacrifice
+    sacrifice: '{{name}} は生贄に捧げられたようです。'
+    # Lorelei
+    lorelei: '{{name}} は怨嗟の歌声に導かれたようです。'
     
 EyesWolf:
   # EyesWolf result strings
@@ -680,16 +749,197 @@ EyesWolf:
     holy: "{{name}} 的襲擊被神聖之力阻止了。"
     # Guard by a trap
     trap: "{{name}} 的襲擊被陷阱阻止了。"
+    # Guard by a SnowLover
+    snow: '{{name}} 的襲擊被雪之力阻止了。'
 
+TongueWolf:
+  # Result of TongueWolf skill.
+  result: '{{name}}の味見の結果、{{target}}は{{job}}でした。'
+  # Result when the skill is lost.
+  resultLost: '{{name}}の味見の結果、{{target}}は{{job}}でした。以降は襲撃対象者の役職を知ることができません。'
 
+Idol:
+  # Select a fan,
+  select: '{{name}}は{{target}}をファンにしました。'
+  # Becoming a fan of idol.
+  become: '{{name}}は{{idol}}のファンになりました。'
+  # Result of observation.
+  result: '{{name}}の観察の結果、現在の村人陣営の人数は{{count}}人でした。'
+
+XianFox:
+  # Select a target.
+  select: '{{name}}は{{target}}の役職を透視しました。'
+  # Result of skill (announced to everyone).
+  result: '昨晩の仙狐による透視の結果は{{result}}でした。'
+
+SnowLover:
+  # Select a target.
+  select: '{{name}}は{{target}}に求愛しました。'
+  # Become a lover.
+  become: '{{name}}は求愛されて恋人になりました。'
+
+Raven:
+  # message when 1 or less Ravens are alive.
+  message: '鴉がカァと鳴く声が村に響きました。'
+
+DecoyWolf:
+  # Use skill.
+  select: '{{name}}は{{target}}の家に忍び込み囮となりました。'
+
+LunaticLover:
+  # Select a target of lunatic love.
+  select: '{{name}}は{{target}}を狂愛の対象に選びました。'
+
+Hooligan:
+  # Select a new member of hooligan.
+  select: '{{name}}は{{target}}を暴動に参加させました。'
+  # Become a HooliganMember.
+  become: '{{name}}は暴動に参加しました。'
+  # Found a guard.
+  foundGuard: '{{name}}は{{target}}を暴動に参加させようとしましたが、{{target}}は警備員でした。'
+
+HooliganAttacker:
+  # name of HooliganMember.
+  jobname: '{{jobname}}（暴動者）'
+  # select a target of attack.
+  select: '{{name}}は{{target}}に暴行を加えました。'
+  # HooliganMember was arrested (for original Hooligan)
+  arrested: '{{name}}は警備員に拘束されて暴行を行えませんでした。'
+  # HooliganMember was uncomplexed
+  uncomplex: '{{name}}は警備員に拘束されて暴動から外れました。'
+
+HooliganGuard:
+  # name of HooliganGuardComplex.
+  jobname: '{{jobname}}（警備員）'
+  # become a guard at first night.
+  become: '村に暴徒が潜んでいます。{{name}}は警備員に任命されました。'
+  # select a target of arrest.
+  select: '{{name}}は{{target}}を拘束しました。'
+
+HomeComer:
+  # select a target of gift.
+  select: '{{name}}は{{target}}へ{{kit}}を渡しました。'
+
+Illusionist:
+  # select a target of illusion.
+  select: '{{name}}は今晩の人狼の襲撃先を{{target}}にすり替えました。'
+
+DragonKnight:
+  # select a target of kill.
+  killSelect: '{{name}}が{{target}}を襲撃しました。'
+
+Satori:
+  # Today's target is automatically chosen.
+  auto: '{{name}}の今日の読心先は自動的に決定されます。'
+  # select a target of mind reading.
+  select: '{{name}}は{{target}}に読心術を使用しました。'
+  # log of result.
+  resultlog: '{{name}}の読心の結果、{{target}}は{{result}}でした。'
+
+Dracula:
+  # select today's target of Dracula
+  select: '{{name}}は{{target}}を吸血しようとしています。'
+  # decided target
+  decide: 'ドラキュラたちは{{target}}を吸血しました。'
+  # there was a dracula attack.
+  attackLog: 'ドラキュラが吸血に成功したようです。'
+  # there was no attack.
+  noAttackLog: 'ドラキュラが吸血に失敗したようです。'
+
+Elementaler:
+  # select target of guard
+  select: '{{name}}は精霊の力で{{target}}を護衛しました。'
+
+Poet:
+  # select destination of poem.
+  select: '{{name}}は{{target}}に歌を送りました。'
+  # received from someone.
+  become: '{{name}}は{{sender}}からの歌を受け取って歌人になりました。'
+
+DarkClown:
+  # System log that a DarkClown is alive.
+  alive: '村に道化が潜んでいます。村人たちは正気を失いました。'
+  # System log that a DarkClown has dead.
+  dead: '村から道化が去り、村人たちは正気に返りました。'
+
+DualPersonality:
+  # Your team is "werewolf".
+  werewolf: '今日の{{name}}は人狼側の人格です。'
+  # Your team is "human".
+  human: '今日の{{name}}は村人側の人格です。'
+
+Sacrifice:
+  # Selected a target.
+  select: '{{name}}が{{target}}を守るため自らの命を差し出そうとしています。'
+  protected: '{{name}}は人身御供を差し出し{{found}}に抵抗しました。'
+
+AbsoluteWolf:
+  protected: '{{name}}の絶対的な力に{{found}}は効きませんでした。'
+
+Oracle:
+  friend: '{{name}}に神託が下りました。恋人陣営が勝利目前です。'
+  fox: '{{name}}に神託が下りました。妖狐陣営が勝利目前です。'
+  werewolf: '{{name}}に神託が下りました。人狼陣営が勝利目前です。'
+
+GachaAddicted:
+  type:
+    normal: 'ノーマルガチャ'
+    premium: 'プレミアムガチャ'
+  gacha: '{{name}}は{{gachaType}}を引いて{{rarity}}【{{jobname}}】を獲得しました。'
+  commit: '{{name}}は引き当てた【{{jobname}}】に決めました。'
+
+Fate:
+  changeRole: '{{name}}は運命の子でした。{{result}}として生きる覚悟を決めました。'
+
+Synesthete:
+  select: '{{name}}は{{target}}の色を見ました。'
+  result: '{{name}}が{{target}}の色を見た結果、{{result}}でした。'
+  color:
+    - 赤色
+    - 茶色
+    - 橙色
+    - 小麦色
+    - 黄色
+    - 黄土色
+    - 緑色
+    - 水色
+    - 藍色
+    - 青色
+    - 紫色
+    - 桜色
+    - 金色
+    - 銀色
+    - 灰色
+
+Streamer:
+  becomeListener: '{{name}}は{{target}}の視聴者になりました。'
+  getJob: '{{name}}は今夜は{{job}}をやってみることにしました。'
+  retire: '{{name}}は視聴者がいなくなり引退して{{job}}になりました。'
+
+QueenOfNight:
+  FascinatePlayer: '{{name}}により{{target}}の心は搔き乱されました。'
+
+Tarzan:
+  # Result of skill.
+  result: '{{name}}は{{count}}人の人狼の気配を感じました。'
+
+RemoteWorker:
+  # Canceled a punishment.
+  cancel: '{{name}}は家にこもり続けて処刑を免れました。'
+
+IntuitionWolf:
+  # Canceled a punishment.
+  guarded: '{{name}}は{{target}}に護衛されたことを直感しました。'
+
+Lorelei:
+  select: '{{name}}はローレライの歌声に魅了されました。'
+  song: '村に歌声が響き渡りました。'
 
 GameMaster:
   # Failed to revive.
   reviveFail: "該玩家無法被復活。"
   # Failed to shorten time.
   shortenFail: "剩餘時間過短無法縮短。"
-  # name of GM when appears at log
-  logName: "$t(roles:jobname.GameMaster)"
   # GM log to heaven.
   heavenLog: "GM→靈界"
   # GM log to audience.
@@ -714,19 +964,19 @@ Friend:
   # name for desc
   name: "戀人"
   # jobname of Friend
-  jobname: "$t(roles:Friend.name)（{{jobname}}）"
+  jobname: "戀人（{{jobname}}）"
 
 CultMember:
   # name for desc
   name: "教主信徒"
   # jobname
-  jobname: "$t(roles:CultMember.name)（{{jobname}}）"
+  jobname: "教主信徒（{{jobname}}）"
 
 WolfMinion:
   # name for desc
   name: "狼的部下"
   # jobname
-  jobname: "$t(roles:WolfMinion.name)（{{jobname}}）"
+  jobname: "狼的部下（{{jobname}}）"
 
 HolyProtected:
   guarded: "{{name}} 被神聖之力守護了。"
@@ -739,15 +989,27 @@ Drunk:
 
 Counseled:
   name: "更生者"
-  jobname: "$t(roles:Counseled.name)（{{jobname}}）"
+  jobname: "更生者（{{jobname}}）"
 
 KeepedLover:
-  fakeName: "$t(roles:Friend.name)"
+  fakeName: "戀人"
   jobname: "玩弄（{{jobname}}）"
-  fakeJobname: "$t(roles:Friend.jobname, {'jobname': {{jobname}} })"
+  fakeJobname: '戀人（{{jobname}}）'
 
 FoxMinion:
   jobname: "狐憑（{{jobname}}）"
+
+GotChocolateTrue:
+  jobname: '本命（{{jobname}}）'
+
+FanOfIdol:
+  name: 'ファン'
+  # message when his idol is dead.
+  idolDead: 'アイドルが死亡したショックで{{name}}は今夜能力を使えなくなりました。'
+
+LoreleiFamilia:
+  name: 'ローレライのしもべ'
+  jobname: 'ローレライのしもべ（{{jobname}}）'
 
 Decider:
   jobname: "{{jobname}}（決定者）"

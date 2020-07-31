@@ -1,0 +1,47 @@
+# Common language fragments.
+
+# basic information of app.
+app:
+  # name of app.
+  name: "月下人狼"
+
+error:
+  # Common heading indicating error.
+  error: "錯誤"
+  # You need to log in.
+  needLogin: "請先登入"
+  # Input is invalid.
+  invalidInput: "輸入無效"
+
+# Message dialog.
+messageDialog:
+  # close button.
+  close: "關閉"
+
+# Error dialog.
+errorDialog:
+  # title.
+  title: "錯誤"
+  # close button.
+  close: "關閉"
+
+# Text for login form.
+loginForm:
+  # title of login form.
+  title: "登入"
+  # button to login.
+  ok: "登入"
+  # cancel button.
+  cancel: "取消"
+  # label for userid input.
+  userid: "帳號"
+  # label for password.
+  password: "密碼"
+  # link to sign up form.
+  signup: "建立帳號"
+  # link to help page.
+  help: "幫助"
+  # link to password reset page.
+  passwordReset: "重設密碼"
+  # error when login failed.
+  error: "帳號或密碼錯誤"

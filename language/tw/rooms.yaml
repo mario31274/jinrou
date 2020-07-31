@@ -1,0 +1,85 @@
+# Error messages
+error:
+  # nonexistent room id.
+  noSuchRoom: "無此村莊。"
+  # a GM cannot be a helper.
+  gmCannotBeHelper: "GM不能成為助手。"
+  # a player cannot be a helper of oneself.
+  noSelfHelper: "不能選擇自己作為幫助的對象。"
+  # This room has already started.
+  alreadyStarted: "此遊戲已經開始。"
+  # You have not join this room.
+  notMember: "尚未加入此村莊。"
+
+  newRoom:
+    # A room name is required.
+    noName: "請輸入村子名稱。"
+    # Room name is too long.
+    nameTooLong: "村子名稱過長。"
+    # Comment is too long.
+    commentTooLong: "村子說明過長。"
+    # Other parameter is invalid.
+    invalidParameter: "參數不正確。"
+    # Cannot make a room because banned
+    banned: "由於受到封鎖，無法建立新村子。"
+    # max player number is too small
+    maxNumberTooSmall: "村子的最大人數過少。"
+
+  theme:
+    # nonexistent theme
+    noTheme: "此主題不存在。"
+    # This theme is unavailable right now.
+    notAvailable: "主題「{{name}}」目前無法使用。"
+    # This theme cannot be locked.
+    notLockable: "主題「{{name}}」無法上鎖"
+    # A room with theme must be blind.
+    notBlind: "使用主題的村子必須開啟匿名模式。"
+    # The number of players cannot be greater than the number of built-in skins of the theme.
+    playerTooMuch: "主題「{{name}}」的最大人數是「{{length}}」。"
+
+  join:
+    # Cannot join because banned
+    banned: "由於受到封鎖，無法加入村子。"
+    # You are already in the room.
+    alreadyJoined: "您已經在村子裡了。"
+    # You are already kicked from this room
+    kicked: "您已被踢出村子，無法再次加入。"
+    # This name is already used.
+    nameUsed: "名字「{{name}}」已被使用。"
+    # This room is full.
+    full: "村子已滿。"
+    # Name is needed.
+    nameNeeded: "請輸入名字"
+    # Name is too long.
+    nameTooLong: "名字長過長。"
+    # Icon URL is too long.
+    iconTooLong: "頭像URL過長。"
+    # Name cannot be only spaces.
+    nameOnlySpaces: "名字不能完全空白。"
+  unjoin:
+    # a GM cannot leave.
+    noGMLeave: "GM不能退村。"
+
+  kick:
+    # a GM cannot be kicked.
+    noKickGM: "GM不能被踢除。"
+
+  find:
+    # Find feature is disabled now.
+    disabled: "目前紀錄檢索功能還未開放。"
+
+# Tweet
+tweet:
+  # A new room is made
+  newRoom:
+    # Tweet body
+    main: "「{{name}}」（{{id}}番村{{options}}）已建立。 #月下人狼建村通知"
+    # Password option
+    password: "🔒有密碼"
+    # Blind option
+    blind: "👤匿名"
+    # GM option
+    gm: "有GM"
+    # delimiter between options
+    delimiter: "、"
+

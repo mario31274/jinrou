@@ -1,0 +1,65 @@
+# Error messages
+error:
+  # User authentication has failed.
+  authFail: "使用者認證失敗。"
+  # Mail address is invalid.
+  invalidMailAddress: "Email格式不正確。"
+  # Two passwords does not match
+  passwordInconsistent: "密碼不一致。"
+  # no such user
+  noSuchUser: "此使用者不存在。"
+
+  newentry:
+    # Account creation is restricted
+    banned: "由於受到封鎖，您無法建立新帳號。"
+    # User ID is invalid
+    useridInvalid: "帳號不正確。"
+    # Password is invalid
+    passwordInvalid: "密碼不正確。"
+    # This user ID is already Used
+    alreadyUsed: "此帳號ID已經被使用。"
+
+  changeProfile:
+    # Name is empty
+    nameEmpty: "請輸入暱稱。"
+    # Name is too long
+    nameTooLong: "暱稱過長。"
+    # Comment is too long
+    commentTooLong: "發言過長。"
+    # Icon URL is too long
+    iconTooLong: "頭像URL過長。"
+
+  confirmMail:
+    # Mail address is too long
+    mailAddressTooLong: "Email地址過長。"
+    # This link is expired
+    expired: "此認證連結無效，或是已經超過有效期限。"
+
+  resetPassword:
+    # Userid or e-mail does not match
+    userNoExist: "無此帳號或Email輸入錯誤。"
+
+  changePassword:
+    # Password is locked
+    locked: "密碼已經鎖定，無法更改。"
+
+  mailConfirmSecurity:
+    # Need to add e-mail address to enable this setting.
+    nomail: "若要啟用此設定必須先設置Email。"
+  dataOpenSetting:
+    # You do not have enough history.
+    history: "過去戰績不夠多。"
+
+confirmMail:
+  # Mail address is confirmed
+  confirmed: "您的Email：{{address}} 已完成確認。"
+  # Mail address is deleted
+  deleted: "Email已成功刪除。"
+  # Password is reset
+  passwordReset: "密碼重設完成，請使用新的密碼登入。"
+  # Setting is changed
+  settingChanged: "設定變更完成。"
+
+mailConfirmSecurity:
+  # Setting is saved.
+  saved: "保存成功。"

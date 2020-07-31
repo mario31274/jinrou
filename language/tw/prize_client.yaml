@@ -1,0 +1,44 @@
+# Language data for prizes page
+
+# title of page
+title: "稱號"
+
+# description of prizes
+description: "稱號可以在滿足勝利次數、敗北次數等特定條件之後取得。"
+
+# back to mypage link.
+backLink: "回到我的頁面"
+
+# list of prizes
+list:
+  # title of prize list section
+  title: "獲得稱號一覧"
+  # number of available prizes
+  prizeNumber: "獲得稱號數: {{count}}"
+  # label of unshrink-prize-list button.
+  unshrinkLabel: "顯示所有稱號"
+  # label of shrink-prize-list button,
+  shrinkLabel: "收起列表"
+
+# edit my prize
+edit:
+  # title of edit section
+  title: "頭銜"
+  # description of edit section
+  description: "獲得した稱號と接続語を組み合わせて自分の肩書きを設定できます。設定した肩書きは入室時に表示されます。"
+  # instruction of how to edit prize
+  instruction: "稱號・接続語と現在の肩書きをクリック・タップまたはドラッグ&ドロップして編集してください。"
+  # title of conjunction list
+  conjunctionListTitle: "接続語"
+  # title of current prize
+  nowPrizeTitle: "目前的頭銜："
+  # trash description
+  trash: "刪除"
+
+
+# save area
+save:
+  # label of save button
+  label: "更改頭銜"
+  # reminder to save
+  reminder: "請按下「更改頭銜」按鈕以套用變更。"

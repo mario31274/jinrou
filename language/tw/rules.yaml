@@ -1,0 +1,352 @@
+# texts related to game rule settings.
+# each rule object has `name` and `label` fields.
+# type=select rules have `labels` and `descriptions` field.
+# type=checkbox & type=hidden rules have `yes` and `no` fields.
+# `yes` and `no` fields may be empty.
+# other fields are used by `getstr` functions.
+rule:
+  yaminabe_safety:
+    name: "闇鍋保險選項"
+    label: "指定職業配置的平衡程度。"
+    labels:
+      supersuper: "走召(α2)"
+      super: "超(β2)"
+      high: "高"
+      middle: "中"
+      lowlow: "低+"
+      low: "低"
+      none: "無"
+      reverse: "逆(α)"
+    descriptions:
+      supersuper: "強さのバランスを調整するかもしれません。"
+      super: "強さのバランスを調整します。"
+      high: "會考慮出現職業之間的相互配合。"
+      middle: "會調整各陣營的比例。"
+      lowlow: "調整到不會變成人外村。"
+      low: "將人狼・妖狐調整到剛好的數量。"
+      none: "完全不在意平衡性，除了保證一個人狼系職業以外其他全部隨機。"
+      reverse: "平衡性很差，但是會調整非人類職業的數量。"
+  hide_singleton_teams:
+    name: "隱藏單獨陣營"
+    label: "如果開啟，惡魔君・吸血鬼陣營・邪教主陣營・烏鴉陣營・暴徒陣營在陣營一覽裡會顯示為其他陣營。"
+    yes: "開啟"
+    no: "關閉"
+  decider:
+    name: "決定者"
+    label: "白天的處刑投票時票數相同的情況下決定者所投的對象優先處死。無法得知誰是決定者。"
+    yes: "開啟"
+    no: ""
+  authority:
+    name: "權力者"
+    label: "白天的處刑投票時權力者的票視為2票。無法得知誰是權力者。"
+    yes: "開啟"
+    no: ""
+  deathnote:
+    name: "死亡筆記本"
+    label: "毎天晩上大家會輪流拿到死亡筆記本，拿到死亡筆記本的人可以殺掉一人。"
+    yes: "開啟"
+    no: ""
+  wolfminion:
+    name: "狼的部下"
+    label: "第一天晚上人狼會指定狼的部下，成為狼的部下的職業能力保持不變但會變成人狼陣營。"
+    yes: "開啟"
+    no: ""
+  drunk:
+    name: "喝醉酒"
+    label: "任何人都有可能喝到ㄎㄧㄤ掉。喝醉酒的玩家在第三天晚上之前都會以為自己是村人。"
+    yes: "開啟"
+    no: ""
+  scapegoat:
+    name: "替身君"
+    label: "替身君是為了在第一天晚上被殺死而存在的NPC"
+    labels:
+      on: "開啟"
+      off: "關閉（某位參加者會死）"
+      no: "關閉（大家都不會死）"
+    descriptions:
+      on: ""
+      off: ""
+      no: ""
+  day:
+    name: "白天"
+    label: "設定白天的長度。"
+  night:
+    name: "夜晚"
+    label: "設定夜晚的長度。"
+  remain:
+    name: "猶豫時間"
+    label: "設定猶豫時間的長度。"
+  voting:
+    name: "投票專用時間"
+    label: "設定投票專用時間的長度。如果有設定，玩家在白天的討論時間裡無法投票，在投票専用時間裡才能投票。"
+  dynamic_day_time:
+    name: "白天的長度由生存人數決定"
+    label: "如果開啟，生存者越多白天的時間長度越長。"
+    yes: "有"
+    no: ""
+  dynamic_day_time_factor:
+    name: "每多一位生存者的秒數"
+    label: "白天長度＝（生存人數+1）×設定的秒數。"
+  will:
+    name: "遺書"
+    label: "如果啟用遺書，每位參加者可以設定遺書，並會在死亡時公開。"
+    yes: "開啟"
+    no: "關閉"
+  heavenview:
+    name: "靈界表示"
+    label: "如果啟用，死亡的玩家可以看見所有人職業、夜晚的發言等。"
+    labels:
+      view: "永遠開啟"
+      norevive: "開啟"
+      "": "關閉"
+    descriptions:
+      view: "即使有復活職業存在，玩家只要一死就能看到所有東西。"
+      norevive: "只要有人可能被復活的情況下就不會公開。"
+      "": "在遊戲結束前都不會公開。"
+  votemyself:
+    name: "可以對自己投票"
+    label: "如果啟用，可以把處刑票投給自己。"
+    yes: "開啟"
+    no: "關閉"
+  voteresult:
+    name: "隱藏投票結果"
+    label: "如果啟用，誰把票投給了誰將無法得知。"
+    yes: "開啟"
+    no: "關閉"
+  waitingnight:
+    name: "夜晚時間結束前等待"
+    label: "關閉的話，夜晚時間會提早結束。"
+    yes: "開啟"
+    no: "關閉"
+  safety:
+    name: "替身君保險選項"
+    label: "若選擇「關閉」或「所有職業」，替身君有可能成為人狼。"
+    labels:
+      full: "開啟"
+      no: "關閉"
+      free: "所有職業"
+    # {{safety_excluded_jobs}} is provided by getOptionStr
+    descriptions:
+      full: "替身君不會成為人外、{{safety_excluded_jobs}}的職業。"
+      no: "替身君不會成為人外。"
+      free: ""
+  noticebitten:
+    name: "襲擊通知"
+    label: "被人狼襲擊的人會知道自己被襲擊了。"
+    yes: "開啟"
+    no: "關閉"
+  GMpsychic:
+    name: "GM靈能者"
+    label: "如果開啟、GM會公開被處刑的人的靈能結果。"
+    yes: "開啟"
+    no: "關閉"
+  silentrule:
+    name: "n秒規則"
+    label: "設定大於一1的話，天亮後的n秒內無法發言。"
+  runoff:
+    name: "決選投票"
+    label: "如果開啟，處刑投票時會對票數最高的人進行決選投票。"
+    labels:
+      no: "關閉"
+      revote: "再投票時"
+      yes: "每次投票時"
+    descriptions:
+      no: ""
+      revote: ""
+      yes: ""
+  drawvote:
+    name: "票數相同時的處理"
+    label: "設定投票票數相同時的處理方法。"
+    labels:
+      revote: "再投票"
+      random: "隨機處刑"
+      none: "不處刑"
+      all: "全員處刑"
+    descriptions:
+      revote: ""
+      random: ""
+      none: ""
+      all: ""
+  yaminabe_hidejobs:
+    name: "配役公開"
+    label: "指定職業配置的公開方法。"
+    labels:
+      "": "公開職業一覽"
+      team: "僅公開陣營人數"
+      "2": "不公開"
+    descriptions:
+      "": "遊戲開始時，會公開所有出現的職業與人數。"
+      team: "只會公開各個陣營的人數。"
+      "2": "出現的職業和人數無法得知。"
+  losemode:
+    name: "敗北村"
+    label: "以敗北為目標的人狼殺。"
+    yes: "開啟"
+    no: ""
+  rolerequest:
+    name: "希望職業制"
+    label: "玩家可以選擇自己想要的職業。"
+    yes: "開啟"
+    no: ""
+  chemical:
+    name: "煉成人狼"
+    label: "可以讓1人同時擔當2種職業的特殊規則。"
+    yes: "開啟"
+    no: ""
+  wolfsound:
+    name: "可以聽見遠處的狼嚎聲"
+    label: "如果開啟就可以在夜晚聽見遠處的狼嚎聲，代表人狼正在發言。"
+    yes: "開啟"
+    no: "關閉"
+  wolfattack:
+    name: "人狼可以咬人狼"
+    label: "人狼可以選擇人狼作為襲擊對象"
+    yes: "開啟"
+    no: ""
+  divineresult:
+    name: "占卜結果顯示時機"
+    label: "調整占卜師在夜晚進行占卜的結果的顯示時間點"
+    labels:
+      immediate: "立刻顯示"
+      sunrise: "天亮顯示"
+    descriptions:
+      immediate: ""
+      sunrise: ""
+  firstnightdivine:
+    name: "占卜師初日白單"
+    label: "如果開啟，第一天的占卜會由系統隨機選擇一位「村人」進行占卜。"
+    labels:
+      auto: "開啟"
+      manual: "關閉"
+    descriptions:
+      auto: ""
+      manual: ""
+  psychicresult:
+    name: "靈能結果顯示時機"
+    label: "調整靈能者在夜晚執行能力後結果的顯示時間點。"
+    labels:
+      sunset: "立刻顯示"
+      sunrise: "天亮顯示"
+    descriptions:
+      sunset: ""
+      sunrise: ""
+  couplesound:
+    name: "可以聽見共有者的悄悄話"
+    label: "如果開啟，可以在夜晚聽見共有者、叫迷狂人的低語。"
+    yes: "開啟"
+    no: "關閉"
+  guardmyself:
+    name: "獵人可以保護自己"
+    label: "如果開啟，獵人、遊蕩獵人、角色扮演者、陷阱師、武士、精靈使可以選擇保護自己。"
+    yes: "開啟"
+    no: ""
+  gjmessage:
+    name: "護衛成功通知"
+    label: "如果開啟，護衛成功時會通知獵人。"
+    yes: "開啟"
+    no: ""
+  consecutiveguard:
+    name: "連續護衛"
+    label: "獵人、遊蕩獵人、角色扮演者、陷阱師、武士、精靈使可以連續保護同一人。"
+    labels:
+      yes: "開啟"
+      no: "關閉"
+    descriptions:
+      yes: ""
+      no: ""
+  deadfox:
+    name: "區別咒殺與襲擊"
+    label: "如果開啟，被妖狐咒殺後的訊息紀錄會與被狼襲撃不同。"
+    yes: "開啟"
+    no: "關閉"
+  hunter_lastattack:
+    name: "最後攻擊"
+    label: "如果開啟最後攻擊，獵師死亡後勝利判定之前會先發動獵師的能力。"
+    labels:
+      yes: "開啟"
+      no: "關閉"
+    descriptions:
+      yes: ""
+      no: ""
+  poisonwolf:
+    name: "人狼襲撃持毒者"
+    label: "設定人狼襲擊埋毒者・猫又時的處理方式。"
+    labels:
+      selector: "連坐襲撃者"
+      "": "隨機連坐"
+    descriptions:
+      selector: ""
+      "": ""
+  friendsjudge:
+    name: "戀人陣營的勝利條件"
+    label: ""
+    labels:
+      alive: "結束時生存"
+      ruin: "只有戀人生存"
+    descriptions:
+      alive: "與妖狐相同。"
+      ruin: ""
+  friendssplit:
+    name: "戀人組合間彼此獨立"
+    label: "在有多組戀人的情況下，勝利條件與殉情的判定不是戀人全體而是各組分開。"
+    yes: "開啟"
+    no: "關閉"
+  quantumwerewolf_table:
+    name: "概率表"
+    label: "設定概率表的表示方法。"
+    labels:
+      open: "顯示玩家名稱"
+      anonymous: "顯示玩家編號"
+    descriptions:
+      open: ""
+      anonymous: "自分以外的玩家編號無法得知。"
+  quantumwerewolf_dead:
+    name: "不顯示已死亡機率"
+    label: "不在概率表中顯示已死亡機率的規則。一般規則會顯示。"
+    yes: "開啟"
+    no: "關閉"
+  quantumwerewolf_diviner:
+    name: "顯示占卜師的機率"
+    label: "在概率表中顯示玩家是占卜師的機率。一般規則不會顯示。"
+    yes: "開啟"
+    no: "關閉"
+  quantumwerewolf_firstattack:
+    name: "初日襲撃"
+    label: "如果開啟則第一天開始就會選擇襲撃對象。"
+    yes: "開啟"
+    no: "關閉"
+
+# texts related to rule groups.
+ruleGroup:
+  yaminabe_option:
+    name: "闇鍋設定"
+  show_roles_option:
+    name: "配役表示設定"
+  normal_rules:
+    name: "一般設定"
+  werewolf:
+    name: "人狼系設定"
+  diviner:
+    name: "占卜師設定"
+  psychic:
+    name: "靈能者設定"
+  couple:
+    name: "共有者設定"
+  guard:
+    name: "獵人等職業設定"
+  fox:
+    name: "妖狐設定"
+  hunter:
+    name: "獵師設定"
+  poison:
+    name: "埋毒者・猫又設定"
+  lover:
+    name: "戀人設定"
+  quantum:
+    name: "量子人狼設定"
+
+# rule-related string.
+common:
+  minutes: "分"
+  seconds: "秒"
+  none: "無"

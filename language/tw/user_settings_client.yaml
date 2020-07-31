@@ -1,0 +1,103 @@
+# Language file for user settings page.
+
+# title of page.
+title: '使用者設定'
+
+# loading text.
+loading: '讀取中…'
+
+# back to mypage link.
+backLink: '返回我的頁面'
+
+# description of settings page.
+description: '使用者設定會儲存在用戶端上。'
+
+# colors.
+color:
+  # default name of profile (without number).
+  defaultProfile: '預設設定'
+  # saved profiles
+  savedProfiles: '已保存顏色設定'
+  # title of colors tab.
+  title: '顏色設定'
+  # text color.
+  textColor: '文字顏色'
+  # background color.
+  backgroundColor: '背景顏色'
+  # sample text
+  sampleText: '預覽顯示'
+  # text that indicates currently color is edited
+  editing: '編輯中'
+  # button to edit profile.
+  editButton: '編輯'
+  # button to delete profile,
+  deleteButton: '刪除'
+  # button to use this profile.
+  useButton: '使用此設定'
+  # button label when this is currently used.
+  usedButtonLabel: '使用中'
+  # button to add a new profile.
+  addButton: '追加'
+  # new name dialog.
+  profileNameDialog:
+    title: '編輯設定'
+    newMessage: '請為新設定輸入名稱。'
+    ok: '確定'
+    cancel: '取消'
+  # delete profile dialog.
+  deleteProfileDialog:
+    title: '刪除設定'
+    message: '確定要刪除設定「{{name}}」嗎？'
+    ok: '刪除'
+    cancel: '取消'
+  # name of each color settings.
+  colorSetting:
+    day: '白天背景色與文字色'
+    night: '夜晚背景色與文字色'
+    heaven: '靈界背景色與文字色'
+    system: '系統紀錄'
+    nextturn: '回合進行紀錄'
+    audience: '觀眾的發言'
+    couple: '共有者的對話'
+    fox: '妖狐的對話'
+    gm1: 'GM的發言1'
+    gm2: 'GM的發言2'
+    heavenmonologue: '在靈界的自言自語'
+    half_day: '憑依惡靈的發言（靈界）'
+    helperwhisper: '助手的發言'
+    hidden: '非公開情報'
+    inlog: '無盡闇鍋時的入室對話紀錄'
+    madcouple: '尖叫狂人的發言'
+    monologue: '自言自語'
+    poem: '詩人的詩'
+    probability_table: '量子人狼的概率表'
+    streaming: '直播內容'
+    userinfo: '拒絕復活'
+    skill: '職業的能力'
+    voteto: '投票'
+    werewolf: '人狼的對話'
+    will: '遺書'
+
+# phone-ui.
+phone:
+  # title of phone-ui tab.
+  title: '手機版相關設定'
+  # ui for smartphone.
+  ui:
+    title: '使用手機版顯示'
+    yes: '使用'
+    no: '不使用'
+  # font size for smartphones.
+  fontSize:
+    title: '文字大小'
+    description: '設定遊戲畫面的文字大小。'
+    large: '大'
+    normal: '中'
+    small: '小'
+    'very-small': '極小'
+  # position of speak form
+  speakFormPosition:
+    title: '發言輸入框位置'
+    description: '設定遊戲畫面的發言輸入框位置。'
+    normal: '預設'
+    fixed: '固定於下方'

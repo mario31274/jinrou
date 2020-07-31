@@ -1,0 +1,89 @@
+# Languae file for top page
+
+# description of app at the top.
+app:
+  # description of app
+  description: '月下人狼是一個完全免費、即時對話、高自由度為特點的人狼伺服器。'
+  # link to features.
+  featuresLink: '看看特點都有啥'
+  # error message shown on login failure.
+  loginError: '帳號或密碼錯誤。'
+
+# sign up form
+signup:
+  title: '帳號註冊'
+  description1: '還沒有月下人狼帳號的朋友可以在這裡註冊帳號。'
+  description2: '註冊帳號只需要設定帳號和密碼。'
+  # submit button
+  submit: '註冊'
+  # notices
+  notice:
+    summaryOpen: '關閉注意事項'
+    summaryClosed: '注意事項'
+    notice1: '帳號ID可以使用半形英數字與底線。'
+    notice2: '帳號ID一旦決定便無法更改。'
+    notice3: '註冊前也請詳閱遊戲說明中的{{link}}。'
+    manualLink: '禁止行為・注意事項'
+
+footer:
+  # footer text.
+  text: '© 2011-2019 うひょ'
+  # GitHub label
+  github: 'GitHub'
+
+featuresTitle: 月下人狼的特點
+# contents of top page.
+# it is a list of objects, and are used programatically.
+features:
+  - icon: hand-holding-usd
+    title: 完全免費、無制限
+    description:
+      - 月下人狼完全免費。所有功能皆為免費，皆可無制限使用。
+  - icon: comments
+    title: 文字式人狼
+    description:
+      - 月下人狼是無聲進行的文字會話遊戲，試著只用文字看穿對手的謊言吧！
+  - icon: file-signature
+    title: 註冊只需一瞬間
+    description:
+      - 遊玩月下人狼需要註冊帳號，但是註冊過程極為簡單，您只需要決定自己的帳號和密碼即可。請注意帳號ID是公開的，請審慎決定。
+      - 登錄Email並非必要，但是登錄了就不用擔心忘記密碼了。
+      - 但是，觀戰者即使沒有帳號一樣可以進行觀戰。
+  - icon: hat-wizard
+    title: 豐富的職業
+    description:
+      - 職業種類豐富也是月下人狼的特點之一。
+      - 包含人狼、占卜師等固有職業，月下人狼集合了100以上種類的各式各樣的職業。
+      - 當然，職業組合也可以自由設定。依照自己的喜好用不同組合的職業創造出屬於自己的村子吧！
+  - icon: cog
+    title: 設定項目也很多元
+    description:
+      - 可以依照自己的喜好對遊戲規則做出細微調整。比如說占卜詩的占卜結果可以選擇普通規則或初日白單。
+      - 月下人狼可以讓想要訂製遊戲規則的人用自己理想中的規則進行遊戲。
+  - icon: user-friends
+    title: 助手機能
+    description:
+      - 助手機能是可以讓玩家和他人組成一對，一起參加遊戲的功能。
+      - 助手會和自己幫助的對象共享視角，並且可以提供只有幫助對象聽得見的建議和討論。
+      - 初心者參加遊戲時如果有人能夠成為助手也是一件令人安心的事。
+  - icon: mortar-pestle
+    title: 黑暗火鍋模式
+    description:
+      - 在月下人狼裡，黑暗火鍋模式非常人氣。黑暗火鍋模式中出現的職業是完全隨機選擇的，每個不同的村子都有其樂趣。
+      - 若你是中〜上級玩家，也有開始後隱藏出現職業種類的模式可供選擇。
+  - icon: lock
+    title: 親友村OK
+    description:
+      - 月下人狼裡的村莊可以設定密碼。沒有密碼的人無法查看或加入村莊。
+      - 但是，遊戲結束後密碼便會解除，因此請注意不要在村子裡留下任何個人資料。
+  - icon: user-secret
+    title: 匿名模式
+    description:
+      - 普通的村子會使用自己的ID或暱稱參加遊戲，因此其他人都會知道自己是誰。
+      - 而匿名的村子（覆面村）則可以隱藏自己真實的名稱加入村莊。你會在加入村莊時決定自己的名稱。
+      - 想要保持新鮮感或是害羞的人聚集的時候推薦使用。
+  - icon: award
+    title: 收集稱號！
+    description:
+      - 滿足遊玩過的村莊數、各職業的勝利數・敗北數等條件，便可以收集對應的稱號。
+      - 盡可能地收集稱號並組合出自己豪華的頭銜吧！

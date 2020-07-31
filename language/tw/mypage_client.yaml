@@ -1,0 +1,80 @@
+# title of mypage
+title: '我的頁面'
+
+# profile section
+profile:
+  title: '個人檔案'
+  # label of edit button
+  edit: '編輯'
+  userid: '帳號'
+  name: '暱稱'
+  nameHelp: '參加遊戲時會顯示的名稱。'
+  comment: '附註'
+  commentHelp: '附註會在個人頁面中顯示'
+  mailAddress: 'Email'
+  mailAddressHelp: '登錄電子郵件地址就可以在忘記密碼時重新設定。您提供的電子郵件地址不會用做其他用途。'
+  mailAddressNotVerified: '未認證：若要完成Email登錄，請按照系統送出的電子郵件上的指示完成認證。'
+  mailAddressChanging: '變更中：若要完成Email的變更，請按照系統送出的電子郵件上的指示完成變更。'
+  icon: '頭像'
+  # icon select button
+  iconSelect: '設定頭像'
+  # delete icon button
+  iconDelete: '刪除頭像'
+  # save button
+  save: '保存變更'
+  # "enter password" prompt
+  savePrompt:
+    message: '請輸入密碼以保存變更'
+    ok: 'OK'
+    cancel: '取消'
+
+# mail confirm security section
+security:
+  title: '安全設定'
+  mailConfirmSecurity: '鎖定密碼、電子郵件'
+  mailConfirmSecurityHelp: '此選項將鎖定您的電子郵件與密碼，若要解除鎖定需要再次認證Email'
+  # password change
+  changePassword: '變更密碼'
+  newPassword: '新密碼'
+  newPassword2: '確認新密碼'
+  currentPassword: '舊密碼'
+  passwordSave: '保存變更'
+
+# news section
+news:
+  title: '通知'
+  loading: '讀取中'
+  date: '日期'
+  message: '内容'
+
+# ban section
+ban:
+  announcement: '此帳號被封鎖，部分操作無法使用'
+  reason: '理由：'
+  period: '時間：'
+  periodDayHour: '剩餘{{days}}天{{hours}}小時'
+  periodHourMinute: '剩餘{{hours}}小時{{minutes}}分鐘'
+  periodMinute: '剩餘{{minutes}}分鐘'
+  periodLessThanMinute: '剩餘不到1分鐘'
+  notice: '若封鎖時間已過依然沒有解除封鎖，請重新載入頁面稍後再試。'
+
+# links section
+links:
+  rooms:
+    title: '村莊列表'
+  mylog:
+    title: '戰績'
+    description: '查看自己参加過的遊戲列表、勝率以及其他紀錄。'
+  prize:
+    title: '稱號'
+    description: '查看已獲得的稱號，以及設定加入遊戲時在名稱前面顯示的頭銜。'
+    number: '稱號獲得數：{{count}}'
+    current: '目前頭銜：{{data}}'
+  gameTutorial:
+    title: '練習村'
+    description: '用來練習遊戲流程的一人用村莊。'
+  settings:
+    title: '設定'
+    description: '變更各種設定。'
+  logout:
+    title: '登出'

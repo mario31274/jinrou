@@ -1,0 +1,6 @@
+error:
+  say:
+    # Comment is needed.
+    needComment: "請輸入留言。"
+    # Restricted as banned.
+    banned: "由於帳號受到限制，您無法發言。"

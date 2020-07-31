@@ -1,0 +1,69 @@
+# laguage file for new room page
+
+# title of newroom component
+title: "建立新村子"
+
+# label of show description button.
+showDescriptionButton: "顯示說明"
+
+# name of room
+roomname:
+  title: "村子名稱"
+
+# password
+password:
+  title: "密碼"
+  description: "設有密碼的村子，進入前需要輸入密碼。"
+  # no password
+  no: "無密碼"
+  # use password
+  yes: "有密碼"
+  # placeholder for password input.
+  placeholder: "請輸入密碼"
+
+# comment of room
+comment:
+  title: "村子說明"
+  description: "村子說明在村莊列表裡會顯示（可省略）"
+
+# maximum number of room.
+maxnumber:
+  title: "最大人數"
+  description: "指定可以参加的最大人數。即使人數沒有達到這個數字一樣可以開始遊戲。"
+
+# blind mode
+blind:
+  title: "匿名模式"
+  description: "啟用匿名模式的村子將不會公開參加者的ID。可以選擇在遊戲結束後公開ID或不公開。"
+  no: "關"
+
+# themes
+theme:
+  title: "主題"
+  description: "若使用主題，匿名模式將被開啟，並且所有玩家的名稱由伺服器隨機決定。"
+  # label for no theme.
+  none: "關"
+
+
+# GM
+gm:
+  title: "GM"
+  description: "開啟的話房主會成為GM加入遊戲而不是村民。"
+  no: "關閉"
+  yes: "開啟"
+
+# watchSpeak
+watchSpeak:
+  title: "觀戰者發言"
+  description: "關閉的話觀看遊戲的人將無法在聊天室發言。"
+  no: "關閉"
+  yes: "開啟"
+
+# label of create button.
+create: "建立新村子"
+
+# confirmation dialog-related text.
+confirm:
+  message: "確定用這些設定建立新村子嗎？"
+  yes: "確定"
+  no: "我再想想..."

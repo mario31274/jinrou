@@ -1,0 +1,20 @@
+# Language file for views
+
+# description of application.
+description: "可即時通訊的人狼伺服器。內建100種以上職業可供選擇。"
+# name of mypage.
+mypage: "我的頁面"
+# name of lobby.
+lobby: "聊天大廳"
+# rooms page.
+rooms: "村莊列表"
+# manual page.
+manual: "遊戲說明"
+# back to home link.
+home: "原作者官網"
+# about page
+about: "關於月下人狼"
+# settings page
+settings: "設定"
+# label of open menu button
+openMenuLabel: "開啟選單"
