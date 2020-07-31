@@ -1,33 +1,33 @@
 section.mylog
-  h1 戦績
+  h1 戰績
   if !loggedin
-    p 自分の戦績を表示するにはログインしてください。
+    p 若要查看自己的戰績，請先登入。
   else
     p
-      a(href="/rooms/my") 自分が参加した部屋の一覧
+      a(href="/rooms/my") 自己參加過的村莊一覧
 
-    h2 最近の戦績
+    h2 最近的戰績
     p
       label.mylog-open
         i.far.fa-fw.fa-id-card#open-recent-icon
-        | 最近の戦績を他のユーザーに公開
+        | 向其他使用者公開自己最近的戰績
         input#open-recent(type="checkbox", disabled)
       i.far.fa-question-circle.mylog-desc-of-open(data-helpicon, title="オンにすると、ユーザーページで最近の戦績を公開します。ただし、非公開に設定した場合でも突然死率のみ公開されます。")
 
     #recentdata
       p
         i.fa.fa-spinner.fa-pulse
-        | 読み込み中……
+        | 讀取中……
 
-    h2 全期間の戦績
+    h2 所有戰績
     p
       label.mylog-open
         i.far.fa-fw.fa-id-card#open-all-icon
-        | 全期間の戦績を他のユーザーに公開
+        | 向其他使用者公開自己所有的戰績
         input#open-all(type="checkbox", disabled)
       i.far.fa-question-circle.mylog-desc-of-open(data-helpicon, title="オンにすると、ユーザーページで全期間の対戦数・勝利数・敗北数を公開します。")
     #alldata
       p
         i.fa.fa-spinner.fa-pulse
-        | 読み込み中……
+        | 讀取中……
 

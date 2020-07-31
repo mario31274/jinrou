@@ -1,23 +1,23 @@
 section
-  h1 パスワード再設定
-  p パスワードを再設定するには、事前にアカウントにメールアドレスを登録している必要があります。
+  h1 重設密碼
+  p 重設密碼必須事先在帳號設定裡登錄Email。
   form(aciton="/")#resetform
     p
       label
-        | ユーザーID
-        input(type="text",size="30",name="userid",pattern="\\\\w+",title="ユーザーIDは半角英数字のみ可能です",required)
+        | 帳號
+        input(type="text",size="30",name="userid",pattern="\\\\w+",title="帳號ID只能使用半形英數字",required)
     p
       label
-        | メールアドレス
+        | Email
         input(type="email",size="30",name="mail",required)
     p
       label
-        | 新しいパスワード
+        | 新密碼
         input(name="newpass",type="password",size="20",required,autocomplete="new-password")
     p
       label
-        | 再入力
+        | 確認密碼
         input(name="newpass2",type="password",size="20",required,autocomplete="new-password")
     p
-      input(type="submit",value="次へ")
+      input(type="submit",value="送出")
     p#resetinfo.error
