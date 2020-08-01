@@ -531,9 +531,9 @@ const Icon = styled(LogPart)<IPropLogPart>`
   min-width: 8px;
 
   img {
-    width: 1em;
-    height: 1em;
-    vertical-align: bottom;
+    width: 3em;
+    height: 3em;
+    vertical-align: center;
     ${({ noName }) => String(noName)};
   }
 
