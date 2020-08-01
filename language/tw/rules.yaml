@@ -127,7 +127,7 @@ rule:
       free: "所有職業"
     # {{safety_excluded_jobs}} is provided by getOptionStr
     descriptions:
-      full: "替身君不會成為人外、{{safety_excluded_jobs}}的職業。"
+      full: "替身君不會成為人外及以下職業：{{safety_excluded_jobs}}。"
       no: "替身君不會成為人外。"
       free: ""
   noticebitten:

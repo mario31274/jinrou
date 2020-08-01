@@ -294,7 +294,7 @@ room:
     ok: '選擇'
     cancel: '取消'
     # label for no helper.
-    nohelper: '停止擔當助手'
+    nohelper: '不擔當助手'
   # reset ready confirmation dialog.
   resetReadyDialog:
     title: '重設[ready]'
