@@ -6,8 +6,8 @@ normalButton: '選擇'
 # label for each form type.
 formType:
   required: '必須'
-  optional: '任意'
-  optionalOnce: '任意（僅限1次）'
+  optional: '可選'
+  optionalOnce: '可選（僅限1次）'
 
 # Name forms which is a little special.
 specialName:
