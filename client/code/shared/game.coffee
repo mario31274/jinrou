@@ -1226,6 +1226,14 @@ exports.new_rules=[
             {
                 type: 'item'
                 value:
+                    type:"checkbox"
+                    id:"scapegoat_will"
+                    defaultChecked: false
+                    value:"1"
+            }
+            {
+                type: 'item'
+                value:
                     type:"separator"
             }
             {

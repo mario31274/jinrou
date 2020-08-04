@@ -67,6 +67,11 @@ rule:
       on: ""
       off: ""
       no: ""
+  scapegoat_will:
+    name: "替身君遺言"
+    label: "開啟替身君遺言，如果替身君有村人以外的職業遺言會不太一樣"
+    yes: "開啟"
+    no: "關閉"
   day:
     name: "白天"
     label: "設定白天的長度。"

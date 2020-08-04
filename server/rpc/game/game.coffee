@@ -856,6 +856,16 @@ class Game
                 newpl=Player.factory gotjs[0], this   #身代わりくん
                 newpl.setProfile profile
                 newpl.scapegoat = true
+                #身代わりくんの遺言
+                if @rule.scapegoat_will
+                    if @i18n.exists "scapegoatWillText.#{newpl.getTypeDisp()}"
+                        len=Object.keys(@i18n.t "scapegoatWillText.#{newpl.getTypeDisp()}", { returnObjects: true }).length
+                        r=Math.floor Math.random()*len
+                        newpl.will=@i18n.t "scapegoatWillText.#{newpl.getTypeDisp()}.#{r}"
+                    else
+                        len=Object.keys(@i18n.t "scapegoatWillText.default", { returnObjects: true }).length
+                        r=Math.floor Math.random()*len
+                        newpl.will=@i18n.t "scapegoatWillText.default.#{r}"
                 @players.push newpl
 
         if @rule.rolerequest=="on" && @rule.chemical != "on"
@@ -953,6 +963,7 @@ class Game
                     if pl.scapegoat
                         # 身代わりくん
                         newpl.scapegoat=true
+                        newpl.will="i'm dead again..."
         if joblist.Thief>0
             # 盗人がいる場合
             thieves=@players.filter (x)->x.isJobType "Thief"
@@ -14316,7 +14327,7 @@ module.exports.actions=(req,res,ss)->
 
             for x in ["jobrule",
             "dynamic_day_time",
-            "decider","authority","scapegoat","will","wolfsound","couplesound","heavenview",
+            "decider","authority","scapegoat","scapegoat_will","will","wolfsound","couplesound","heavenview",
             "wolfattack","guardmyself","votemyself","deadfox","deathnote","divineresult","psychicresult","waitingnight",
             "safety","friendsjudge","noticebitten","voteresult","GMpsychic","wolfminion","drunk","losemode","gjmessage","rolerequest","runoff","drawvote","chemical",
             "firstnightdivine","consecutiveguard",
