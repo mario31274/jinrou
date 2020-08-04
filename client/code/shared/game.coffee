@@ -1230,6 +1230,8 @@ exports.new_rules=[
                     id:"scapegoat_will"
                     defaultChecked: false
                     value:"1"
+                    disabled:(rule)->
+                        !(rule.rules.get('scapegoat') == 'on')
             }
             {
                 type: 'item'
