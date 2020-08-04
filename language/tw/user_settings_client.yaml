@@ -76,7 +76,8 @@ color:
     skill: '職業的能力'
     voteto: '投票'
     werewolf: '人狼的對話'
-    will: '遺書'
+    will: '遺言'
+    scapegoat_special_will: '替身君特殊遺言'
 
 # phone-ui.
 phone:

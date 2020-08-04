@@ -190,7 +190,7 @@ class OneLogInner extends React.PureComponent<IPropOneLog, {}> {
           ? null
           : log.mode === 'monologue' || log.mode === 'heavenmonologue'
             ? t('log.monologue', { name: log.name }) + ':'
-            : log.mode === 'will'
+            : log.mode === 'will' || log.mode === 'scapegoat_special_will'
               ? t('log.will', { name: log.name }) + ':'
               : log.mode === 'streaming'
                 ? t('log.streaming', { name: log.name }) + ':'
@@ -471,6 +471,13 @@ export function computeLogStyle(mode: Log['mode'], theme: Theme): LogStyle {
       return {
         background: theme.user.will.bg,
         color: theme.user.will.color,
+        borderColor: null,
+      };
+    }
+    case 'scapegoat_special_will': {
+      return {
+        background: theme.user.scapegoat_special_will.bg,
+        color: theme.user.scapegoat_special_will.color,
         borderColor: null,
       };
     }

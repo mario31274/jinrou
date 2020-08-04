@@ -24,6 +24,7 @@ export interface NormalLog extends LogBase {
     | 'couple'
     | 'fox'
     | 'will'
+    | 'scapegoat_special_will'
     | 'userinfo'
     | 'madcouple'
     | 'wolfskill'

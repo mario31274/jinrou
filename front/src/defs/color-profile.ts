@@ -120,6 +120,10 @@ export interface ColorProfile {
    * Color of will log.
    */
   will: OneColor;
+  /**
+   * Color of scapegoat's will log when he has a special job.
+   */
+  scapegoat_special_will: OneColor;
 }
 
 /**
@@ -240,6 +244,10 @@ const commonDefaults = {
   will: {
     bg: '#222222',
     color: '#ffffff',
+  },
+  scapegoat_special_will: {
+    bg: '#222222',
+    color: '#ffff00',
   },
 };
 

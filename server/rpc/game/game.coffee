@@ -2014,10 +2014,16 @@ class Game
             @ss.publish.user x.realid,"refresh",{id:@id}
             if @rule.will=="die" && x.will
                 # 死んだら遺言発表
-                log=
-                    mode:"will"
-                    name:x.name
-                    comment:x.will
+                if x.scapegoat && !x.isJobType "Human" #身代わりくんは役職がある
+                    log=
+                        mode:"scapegoat_special_will"
+                        name:x.name
+                        comment:x.will
+                else
+                    log=
+                        mode:"will"
+                        name:x.name
+                        comment:x.will
                 splashlog @id,this,log
         # 蘇生のログも表示
         @showReviveLogs()

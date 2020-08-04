@@ -35,6 +35,7 @@ export const sampleIsBold: Record<ColorName, boolean> = {
   voteto: true,
   werewolf: false,
   will: false,
+  scapegoat_special_will: false,
 };
 
 /**
@@ -65,5 +66,6 @@ export const colorNames: ColorName[] = allElements<ColorName>()([
   'streaming',
   'hidden',
   'will',
+  'scapegoat_special_will',
   'probability_table',
 ]);
