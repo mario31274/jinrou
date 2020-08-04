@@ -3233,7 +3233,7 @@ class Player
     isListener:(game,log)->
         alives = game.players.filter (x)->!x.dead && x.isJobType("DarkWolf")
 
-        if log.mode in ["day","system","nextturn","prepare","monologue","heavenmonologue","skill","will","voteto","gm","gmreply","helperwhisper","probability_table","userinfo","poem","streaming"]
+        if log.mode in ["day","system","nextturn","prepare","monologue","heavenmonologue","skill","will","scapegoat_special_will","voteto","gm","gmreply","helperwhisper","probability_table","userinfo","poem","streaming"]
             # 全員に見える
             true
         else if log.mode in ["heaven","gmheaven"]
