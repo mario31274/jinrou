@@ -272,7 +272,7 @@ room:
   # reset ready button.
   resetReady: '重設[ready]'
   # Discard this room button.
-  discard: '將此村廢村'
+  discard: '廢棄此村莊'
   # open a new room with same setting button.
   newRoom: '用同樣設定建立新村'
   # that room does not exist.
