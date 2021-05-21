@@ -530,7 +530,7 @@ const LogPart = styled.div<{
   word-break: break-word;
   padding: 1px 0;
   font-size: var(--base-font-size);
-  min-height: ${props => (props.logStyle.borderColor ? '48px' : '0')};
+  min-height: 48px;
 `;
 
 /**
