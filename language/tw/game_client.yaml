@@ -155,7 +155,7 @@ speak:
   # will button.
   will:
     # click to open button.
-    open: '遺書'
+    open: '顯示遺書'
     # click to close button.
     close: '隱藏遺書'
     # "Input your will" message,
@@ -258,7 +258,7 @@ room:
   # unjoin button
   unjoin: '退出村子'
   # ready/unready button.
-  ready: '準備完成/準備中'
+  ready: '準備完成/取消準備'
   # description of ready/unready button.
   readyDescription: '全員準備完成便可開始遊戲。'
   # helper button.
@@ -270,7 +270,7 @@ room:
   # kick player button.
   kick: '踢除參加者'
   # reset ready button.
-  resetReady: '重設[ready]'
+  resetReady: '重設村莊準備狀態'
   # Discard this room button.
   discard: '廢棄此村莊'
   # open a new room with same setting button.
@@ -297,7 +297,7 @@ room:
     nohelper: '不擔當助手'
   # reset ready confirmation dialog.
   resetReadyDialog:
-    title: '重設[ready]'
+    title: '重設村莊準備狀態'
     message: '要解除所有人的[ready]嗎？'
     yes: '解除'
     no: '取消'
