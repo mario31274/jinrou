@@ -48,11 +48,13 @@ export const CommentContent: React.FunctionComponent<
   console.log(comment, supplement);
   if (supplement == null || supplement.length === 0) {
     return (
-      <span
-        dangerouslySetInnerHTML={{
-          __html: autolink(comment, autolinkSetting),
-        }}
-      />
+      <div>
+        <span
+          dangerouslySetInnerHTML={{
+            __html: autolink(comment, autolinkSetting),
+          }}
+        />
+      </div>
     );
   }
   // perform calculation of special commands.

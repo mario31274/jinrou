@@ -216,7 +216,9 @@ class OneLogInner extends React.PureComponent<IPropOneLog, {}> {
           />
         </Comment>
       ) : (
-        <Comment {...commentProps}>{sanitizeLog(log.comment)}</Comment>
+        <Comment {...commentProps}>
+          <div>{sanitizeLog(log.comment)}</div>
+        </Comment>
       );
       return (
         <LogLineWrapper>
@@ -225,7 +227,7 @@ class OneLogInner extends React.PureComponent<IPropOneLog, {}> {
             {icon != null ? <img src={icon} alt="" /> : null}
           </Icon>
           <Name noName={noName} {...props}>
-            {nameText ? sanitizeLog(nameText) : null}
+            {nameText ? <div>{sanitizeLog(nameText)}</div> : null}
           </Name>
           {comment}
           <Time
@@ -528,6 +530,7 @@ const LogPart = styled.div<{
   word-break: break-word;
   padding: 1px 0;
   font-size: var(--base-font-size);
+  min-height: ${props => (props.logStyle.borderColor ? '48px' : '0')};
 `;
 
 /**
@@ -555,6 +558,7 @@ const Icon = styled(LogPart)<IPropLogPart>`
  */
 const Name = styled(LogPart)<IPropLogPart>`
   grid-column: 2;
+  display: flex;
   max-width: 10em;
   overflow: hidden;
 
@@ -562,12 +566,24 @@ const Name = styled(LogPart)<IPropLogPart>`
   white-space: nowrap;
   word-wrap: break-word;
   text-align: right;
+  div {
+    margin-top: 1em;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 0;
+  }
   ${phone<IPropLogPart>`
     ${({ noName }) => (noName ? 'display: none;' : '')}
     max-width: none;
     text-align: left;
     font-size: calc(0.75 * var(--base-font-size));
     border-bottom: none;
+    div {
+      margin-top: auto;
+      margin-bottom: auto;
+      margin-left: 0;
+      margin-right: auto;
+    }
   `};
 `;
 
@@ -576,6 +592,10 @@ const Name = styled(LogPart)<IPropLogPart>`
  */
 const Main = styled(LogPart)<IPropLogPart>`
   grid-column: 3;
+  display: flex;
+  div {
+    margin: auto 0;
+  }
   ${phone<IPropLogPart>`
     grid-column: ${({ noName }) => (noName ? '2 / 3' : '2 / 4')};
     ${({ noName }) => (noName ? '' : 'border-top: none;')}
