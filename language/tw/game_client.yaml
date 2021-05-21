@@ -274,7 +274,7 @@ room:
   # Discard this room button.
   discard: '廢棄此村莊'
   # open a new room with same setting button.
-  newRoom: '用同樣設定建立新村'
+  newRoom: '用相同設定建立新村'
   # that room does not exist.
   roomDoesNotExist: '此村莊不存在。'
   # Player information dialog.
