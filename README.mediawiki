@@ -1,9 +1,11 @@
 月下人狼繁體中文版
+
 主要改動：
 * 增加替身君遺書（仿鑽石伺服器版）
 * 更大的頭像
 
 This is a fork of uhyo's jinrou in Traditional Chinese.
+
 Features added:
 * Scapegoat wills (diam version-like)
 * Larger avatars in chats
