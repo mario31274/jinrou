@@ -8,6 +8,7 @@ common:
   chemicalWerewolf: 'ケミカル人狼'
   # 敗北村
   losemode: '敗北村'
+  ushi: '2陣営戦'
 # Error messages
 error:
   # Common error message
@@ -139,6 +140,7 @@ system:
     rebirth: '{{name}}は転生しました。'
   # gameStart-related logs
   gamestart:
+    shoji: '壁に耳あり障子に目あり。'
     # Diviner result mode is changed
     divinerModeChanged: '占い結果に影響する役職が存在するので、占い結果が「すぐ分かる」から「翌朝分かる」に変更されました。'
     # Excluded jobs
@@ -266,11 +268,13 @@ foundDetail:
   elemental: '暴走した精霊の力'
   sacrifice: '生贄'
   santasuicide: 'サンタクロースの後追い自殺'
-  fascinatesuicide: '月下美人による後追い自殺'
+  fascinatesuicide: '魅了による後追い自殺'
   bonds: '絆による後追い自殺'
   lorelei: '怨嗟の歌声'
   loreleisuicide: 'ローレライの後追い自殺'
   oni: '人攫い'
+  selfdestruct: '自爆'
+  assassinate: '暗殺'
   fallback: '不明'
   situation: '{{name}}の死因は{{detail}}でした。'
 
