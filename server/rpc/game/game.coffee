@@ -3270,13 +3270,9 @@ class Player
 
     # ログが見えるかどうか（通常のゲーム中、個人宛は除外）
     isListener:(game,log)->
-<<<<<<< HEAD
         alives = game.players.filter (x)->!x.dead && x.isJobType("DarkWolf")
 
         if log.mode in ["day","system","nextturn","prepare","monologue","heavenmonologue","skill","will","scapegoat_special_will","voteto","gm","gmreply","helperwhisper","probability_table","userinfo","poem","streaming"]
-=======
-        if log.mode in ["day","system","nextturn","prepare","monologue","heavenmonologue","skill","will","voteto","gm","gmreply","helperwhisper","probability_table","userinfo","poem","streaming"]
->>>>>>> 9e8dab0c9861738d670e5df06502c70c674222e1
             # 全員に見える
             true
         else if log.mode in ["heaven","gmheaven"]
@@ -15196,11 +15192,7 @@ module.exports.actions=(req,res,ss)->
 
             for x in ["jobrule",
             "dynamic_day_time",
-<<<<<<< HEAD
             "decider","authority","scapegoat","scapegoat_will","will","wolfsound","couplesound","heavenview",
-=======
-            "decider","authority","scapegoat","will","wolfsound","couplesound","heavenview","shoji",
->>>>>>> 9e8dab0c9861738d670e5df06502c70c674222e1
             "wolfattack","guardmyself","votemyself","deadfox","deathnote","divineresult","psychicresult","waitingnight",
             "safety","friendsjudge","noticebitten","voteresult","GMpsychic","wolfminion","drunk","losemode","gjmessage","rolerequest","runoff","drawvote","chemical","ushi",
             "firstnightdivine","consecutiveguard",
