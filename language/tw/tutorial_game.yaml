@@ -34,7 +34,7 @@ phase0:
 phase1:
   # message by guide after speaking as audience
   stepMessage1: |
-    做得好！　觀戰者也可以像這樣發言（禁止觀戰者發言的村子除外）。
+    做得好！觀戰者也可以像這樣發言（禁止觀戰者發言的村子除外）。
 
     我是負責在新手村介紹遊戲流程的替身君。請多多指教。
   stepMessage2: |

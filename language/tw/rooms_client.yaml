@@ -17,7 +17,7 @@ status:
   # room is playing.
   playing: "對戰中"
   # room is ended.
-  end: "終了"
+  end: "已結束"
 
 # gm is on
 gm: "有GM"

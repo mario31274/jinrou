@@ -6,7 +6,7 @@
 # other fields are used by `getstr` functions.
 rule:
   yaminabe_safety:
-    name: "闇鍋保險選項"
+    name: "暗鍋平衡選項"
     label: "指定職業配置的平衡程度。"
     labels:
       supersuper: "走召(α2)"
@@ -18,13 +18,13 @@ rule:
       none: "無"
       reverse: "逆(α)"
     descriptions:
-      supersuper: "強さのバランスを調整するかもしれません。"
-      super: "強さのバランスを調整します。"
+      supersuper: "或許可能會進行調整。。"
+      super: "依能力強弱進行調整。"
       high: "會考慮出現職業之間的相互配合。"
       middle: "會調整各陣營的比例。"
       lowlow: "調整到不會變成人外村。"
       low: "將人狼・妖狐調整到剛好的數量。"
-      none: "完全不在意平衡性，除了保證一個人狼系職業以外其他全部隨機。"
+      none: "完全不在意平衡性，除了確保一個人狼系職業，其他職業全部隨機。"
       reverse: "平衡性很差，但是會調整非人類職業的數量。"
   hide_singleton_teams:
     name: "隱藏單獨陣營"
@@ -198,6 +198,11 @@ rule:
     label: "可以讓1人同時擔當2種職業的特殊規則。"
     yes: "開啟"
     no: ""
+  ushi:
+    name: "2陣營戰"
+    label: "出現的職業僅限村人陣營或人狼陣營的職業。"
+    yes: "開啟"
+    no: ""
   wolfsound:
     name: "可以聽見遠處的狼嚎聲"
     label: "如果開啟就可以在夜晚聽見遠處的狼嚎聲，代表人狼正在發言。"
@@ -238,6 +243,11 @@ rule:
   couplesound:
     name: "可以聽見共有者的悄悄話"
     label: "如果開啟，可以在夜晚聽見共有者、叫迷狂人的低語。"
+    yes: "開啟"
+    no: "關閉"
+  shoji:
+    name: "隔門有眼"
+    label: "如果開啟，在遊戲開始時會警告大家村子裡存在有竊聽能力的職業。"
     yes: "開啟"
     no: "關閉"
   guardmyself:

@@ -8,6 +8,7 @@ common:
   chemicalWerewolf: "煉成人狼"
   # 敗北村
   losemode: "敗北村"
+  ushi: '2陣營戰'
 # Error messages
 error:
   # Common error message
@@ -115,7 +116,6 @@ error:
       # Norevive is already set.
       done: "已經拒絕復活。"
 
-
 # System Logs
 system:
   # Room state changed logs
@@ -140,6 +140,7 @@ system:
     rebirth: "{{name}} 轉生了。"
   # gameStart-related logs
   gamestart:
+    shoji: '壁に耳あり障子に目あり。'
     # Diviner result mode is changed
     divinerModeChanged: "由於存在著會影響占卜結果的職業，占卜結果得知時機從「馬上得知」變更為「隔晨得知」。"
     # Excluded jobs
@@ -168,6 +169,7 @@ system:
     wolfcub: "狼之子的力量，今日將襲擊 2 人。"
     # A user is notified to be attacked by a werewolf.
     attacked: "{{name}} 被人狼襲擊了。"
+    sleepwalker: "{{results}} 在夜晚徘徊。"
   # Logs related to voting
   voting:
     # No player was punished.
@@ -222,6 +224,7 @@ found:
   suicide: "{{name}} 追隨某人之後選擇自殺。"
   infirm: "{{name}} 衰老死亡。"
   hunter: "{{name}} 受到槍彈擊殺身亡。"
+  bonds: '{{name}}は絆に引きずられるように誰かの後を追って自ら死を選びました。'
   gm: "{{name}} 被GM指定死亡。"
   goneDay: "{{name}} 因為沒有投票而暴斃死，暴斃死是非常嚴重、令人感到困擾的行為，請絕對不要這樣做。"
   goneNight: "{{name}} 因為沒有發動夜晚能力而暴斃死，暴斃死是非常嚴重、令人感到困擾的行為，請絕對不要這樣做。"
@@ -266,8 +269,12 @@ foundDetail:
   sacrifice: "活人獻祭"
   santasuicide: "追隨聖誕老人的身後自殺了"
   fascinatesuicide: "追隨月下美人的身後自殺了"
+  bonds: "追隨羈絆之人而殉情自殺了"
   lorelei: "哀怨的歌聲"
   loreleisuicide: "追隨羅蕾萊的身後自殺了"
+  oni: "被鬼抓走了"
+  selfdestruct: "自爆"
+  assassinate: "暗殺"
   fallback: "不明"
   situation: "{{name}}的死因：{{detail}}。"
 
@@ -289,6 +296,9 @@ judge:
   lorelei: "羅蕾萊誘惑了所有村人，所有的一切都消失在了漩渦之中……"
   draw: "平手。"
   scapegoat: "村子已經被替身君支配了。"
+  spaceWerewolf:
+    human: '在船員們的努力不懈下鏟除了船上所有的內奸。'
+    werewolf: '由於內奸的從中破壞，任務以失敗告終。'
   # short summary
   short:
     human: "村人勝利"
@@ -299,7 +309,6 @@ judge:
     cult: "邪教主勝利"
     vampire: "吸血鬼陣營勝利"
     lonewolf: "一匹狼勝利"
-    draw: "…"
     raven: "烏鴉勝利"
     hooligan: "暴徒勝利"
     lorelei: "羅蕾萊勝利"
@@ -321,7 +330,7 @@ logs:
 # Tweet.
 tweet:
   # Tweet when game ended
-  gameend: "「{{roomname}}」的結果：{{result}} #紫月人狼"
+  gameend: "「{{roomname}}」的結果：{{result}} #月下人狼建村通知"
 
 # Scapegoat's will
 scapegoatWillText:
