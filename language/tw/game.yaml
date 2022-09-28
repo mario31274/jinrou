@@ -185,7 +185,7 @@ system:
     voted: "{{name}} 對 {{target}} 投票。"
   # Quantum werewolf logs
   quantum:
-    breakdown: "世界崩壞，概率不能被定義了。"
+    breakdown: "世界崩潰，概率無法被定義了。"
   # Revival of a user
   revive: "{{name}} 復活了。"
   # Role of a player changed
@@ -219,12 +219,12 @@ found:
   normal: "{{name}} 悽慘的死狀被發現。"
   curse: "{{name}} 被咒殺。"
   punish: "{{name}} 被表決處死。"
-  leave: "{{name}} 離開村莊了。"
+  leave: "{{name}} 離開了村莊。"
   body: "{{name}} 的屍體被發現。"
-  suicide: "{{name}} 追隨某人之後選擇自殺。"
-  infirm: "{{name}} 衰老死亡。"
+  suicide: "{{name}} 追隨某人而選擇自殺。"
+  infirm: "{{name}} 衰老而死。"
   hunter: "{{name}} 受到槍彈擊殺身亡。"
-  bonds: '{{name}}は絆に引きずられるように誰かの後を追って自ら死を選びました。'
+  bonds: '{{name}} 似乎受到某種牽絆而追隨某人選擇了自殺。'
   gm: "{{name}} 被GM指定死亡。"
   goneDay: "{{name}} 因為沒有投票而暴斃死，暴斃死是非常嚴重、令人感到困擾的行為，請絕對不要這樣做。"
   goneNight: "{{name}} 因為沒有發動夜晚能力而暴斃死，暴斃死是非常嚴重、令人感到困擾的行為，請絕對不要這樣做。"

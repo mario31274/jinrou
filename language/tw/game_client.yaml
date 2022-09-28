@@ -229,7 +229,7 @@ log:
   will: '{{name}}的遺書'
   # poem sent by Poet
   poem:
-    description: '{{target}} 收到了來自 {{name}} 送的詩。'
+    description: '{{target}} 收到了 {{name}} 送的詩。'
   # streaming
   streaming: '{{name}}的直播'
 # Game view: player box.
@@ -270,7 +270,7 @@ room:
   # kick player button.
   kick: '踢除參加者'
   # reset ready button.
-  resetReady: '重設村莊準備狀態'
+  resetReady: '重設村子的準備狀態'
   # Discard this room button.
   discard: '廢棄此村莊'
   # open a new room with same setting button.
@@ -289,12 +289,12 @@ room:
     cancel: '取消'
   # helper select dialog.
   helperDialog:
-    title: '助手'
+    title: '幫手'
     message: '請選擇要幫助的對象'
     ok: '選擇'
     cancel: '取消'
     # label for no helper.
-    nohelper: '不擔當助手'
+    nohelper: '不擔當幫手'
   # reset ready confirmation dialog.
   resetReadyDialog:
     title: '重設村莊準備狀態'
@@ -374,17 +374,17 @@ reportForm:
   title: '報告'
   # description shown at the top of form.
   description: |
-    システムのバグや悪質なユーザーを発見した場合、こちらからご報告ください。
-    ※報告に対して個別の返信はしておりません。緊急性が高い場合や返信が必要な場合は、他の手段で管理者にご連絡ください。
+    若系統有BUG或發現惡意玩家，請由此處回報。
+    ※回報系統不會一一進行回覆。若有亟待回覆或高急迫性的情況，請使用其他管道向管理員連絡。
   # legend of kind select.
-  kind: '報告の種類'
+  kind: '回報種類'
   # legend of report content.
-  content: '報告の内容'
+  content: '回報内容'
   # placeholder of report content.
-  contentPlaceHolder: '報告の詳細を入力してください'
+  contentPlaceHolder: '請輸入詳細情況'
   # label of send button.
-  send: '送信'
+  send: '發送'
   # message when report is sent.
-  thankyou: '報告を送信しました。ご協力いただきありがとうございました。'
+  thankyou: '回報已發送。感謝您的合作，我們會盡快處理。'
   # button to close message sent dialog.
-  close: '閉じる'
+  close: '關閉'
