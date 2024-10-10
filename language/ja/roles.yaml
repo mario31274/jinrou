@@ -184,6 +184,16 @@ jobname:
   SpaceWerewolfObserver: '観察者'
   SpaceWerewolfGuard: '見張り'
   SpaceWerewolfSabotage: '破壊者'
+  FrontOni: '前鬼'
+  BackOni: '後鬼'
+  Secretary: '秘書'
+  ResidualHaunting: '地縛霊'
+  HouseKeeper: '家政婦'
+  RainyBoy: '雨男'
+  DarkPsychic: '闇の霊媒師'
+  Itako: 'イタコ'
+
+  # Name of special subjobs.
   GameMaster: 'ゲームマスター'
   Helper: 'ヘルパー'
   Waiting: '待機中'
@@ -772,6 +782,8 @@ Emma:
     selfdestruct: '{{name}}は自爆したようです。'
     # Killed by Assassin
     assassinate: '{{name}}は暗殺されたようです。'
+    # Killed by DarkPsychic
+    ghostrevenge: '{{name}}は亡霊の怨念に殺されたようです。'
 
 EyesWolf:
   # EyesWolf result strings
@@ -1069,6 +1081,24 @@ Actress:
 
 StraySheep:
   select: '{{name}}は身代わりになろうとしています。'
+
+Secretary:
+  select: '{{name}}は{{target}}を補佐しました。'
+
+ResidualHaunting:
+  select: '{{name}}は{{target}}の家に取り憑きました。'
+
+HouseKeeper:
+  select: '{{name}}は{{target}}の家に訪れました。'
+  detect: '{{name}}は{{werewolf}}が{{target}}を襲うのを目撃しました。'
+
+RainyBoy:
+  select: '{{name}}は翌日に雨を降らせます。'
+  weather: '今日は雨が降っています。'
+
+Itako:
+  select: '{{name}}は{{target}}の声に耳を傾けました。'
+  result: '{{name}}は{{target}}の声を聴きました。{{target}}は{{job}}でした。'
 
 # Werewolf
 SpaceWerewolfImposter:
